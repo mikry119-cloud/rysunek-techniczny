@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a2342">
+<meta name="color-scheme" content="dark">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rysunek">
+<meta name="application-name" content="Rysunek techniczny">
+<meta name="description" content="Nauka rysunku technicznego od podstaw – linie, rzuty, wymiarowanie, przekroje, aksonometria, rysunki budowlane i stolarskie.">
+<title>Rysunek techniczny – nauka od podstaw</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<style>@media(min-width:900px){main{max-width:820px}}</style>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22%230a2342%22/%3E%3Cg%20stroke%3D%22%238fc7ff%22%20stroke-opacity%3D%22.22%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M0%2064H512M0%20128H512M0%20192H512M0%20256H512M0%20320H512M0%20384H512M0%20448H512M64%200V512M128%200V512M192%200V512M256%200V512M320%200V512M384%200V512M448%200V512%22/%3E%3C/g%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23eaf4ff%22%20stroke-width%3D%2214%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M126%20330%20L126%20190%20L256%20115%20L386%20190%20L386%20330%20L256%20405%20Z%22/%3E%3Cpath%20d%3D%22M126%20190%20L256%20265%20L386%20190%20M256%20265%20V405%22/%3E%3C/g%3E%3Ctext%20x%3D%22256%22%20y%3D%22490%22%20fill%3D%22%23ff9a1f%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2260%22%20text-anchor%3D%22middle%22%3E1%3A50%3C/text%3E%3C/svg%3E%0A">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+:root{--bg:#0a2342;--bg2:#0e2f58;--card:rgba(13,46,90,.82);--line:#eaf4ff;--blue:#8fc7ff;--dim:#6f9fd6;--acc:#ff9a1f;--ok:#46e09a;--bad:#ff5d6c;--r:14px;--safe-b:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;color:var(--line);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+body{background-color:var(--bg);background-image:linear-gradient(rgba(143,199,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(143,199,255,.12) 1px,transparent 1px),linear-gradient(rgba(143,199,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(143,199,255,.05) 1px,transparent 1px);background-size:50px 50px,50px 50px,10px 10px,10px 10px;background-attachment:fixed;min-height:100vh;overflow-x:hidden}
+header.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) 14px 10px;background:rgba(8,28,54,.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(143,199,255,.25)}
+header.top h1{font-size:15px;letter-spacing:.12em;text-transform:uppercase;margin:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:700}
+header.top h1 span{color:var(--acc)}
+.iconbtn{background:none;border:1px solid rgba(143,199,255,.35);color:var(--line);border-radius:10px;min-width:40px;height:40px;font-size:18px;display:grid;place-items:center;cursor:pointer;padding:0 8px}
+main{max-width:680px;margin:0 auto;padding:14px 14px calc(96px + var(--safe-b))}
+nav.bot{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;background:rgba(8,28,54,.96);border-top:1px solid rgba(143,199,255,.25);padding-bottom:var(--safe-b)}
+nav.bot a{flex:1;text-align:center;color:var(--blue);text-decoration:none;font-size:11.5px;padding:7px 0 8px;letter-spacing:.04em}
+nav.bot a svg{display:block;margin:0 auto 2px;width:24px;height:24px}
+nav.bot a.on{color:var(--acc)}
+h2{font-size:21px;margin:18px 0 8px;letter-spacing:.02em}
+h3{font-size:17px;margin:20px 0 8px;color:var(--blue);display:flex;align-items:center;gap:8px}
+h3 .no{color:var(--acc);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
+p{margin:8px 0}
+b.a,.acc{color:var(--acc)}
+.card{background:var(--card);border:1px solid rgba(143,199,255,.28);border-radius:var(--r);padding:14px;margin:12px 0;position:relative}
+.hero{padding:16px;border:1px dashed rgba(143,199,255,.45);border-radius:var(--r);background:rgba(10,35,66,.6);display:flex;gap:10px;align-items:center}
+.hero .tx{flex:1}
+.hero .tx h2{margin:0 0 4px;font-size:20px;text-transform:uppercase;letter-spacing:.08em}
+.hero svg.sv{width:120px;flex:none}
+.prog{height:10px;background:rgba(143,199,255,.16);border-radius:6px;overflow:hidden;margin:8px 0 4px}
+.prog i{display:block;height:100%;background:linear-gradient(90deg,var(--acc),#ffc46b);border-radius:6px;transition:width .5s}
+.small{font-size:13px;color:var(--blue)}
+.lc{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit;cursor:pointer}
+.lc .n{font:700 26px/1 ui-monospace,Menlo,Consolas,monospace;color:var(--acc);min-width:42px}
+.lc .b{flex:1;min-width:0}
+.lc .b strong{display:block;font-size:16px}
+.lc .st{font-size:12px;padding:3px 8px;border-radius:20px;border:1px solid rgba(143,199,255,.4);color:var(--blue);white-space:nowrap}
+.lc .st.ok{border-color:var(--ok);color:var(--ok)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid rgba(143,199,255,.28);border-radius:var(--r);padding:12px;min-height:110px}
+.tile .ic{font-size:26px}
+.tile strong{display:block;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:46px;padding:10px 16px;border-radius:12px;border:1px solid rgba(143,199,255,.5);background:rgba(143,199,255,.1);color:var(--line);font:600 15px/1.2 inherit;font-family:inherit;cursor:pointer;text-decoration:none}
+.btn.acc{background:var(--acc);border-color:var(--acc);color:#1b1200}
+.btn.full{width:100%}
+.btn:active{transform:scale(.98)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.row .btn{flex:1}
+figure.fig{margin:12px 0;padding:10px;border:1px dashed rgba(143,199,255,.4);border-radius:12px;background:rgba(6,26,52,.55)}
+figure.fig figcaption{font-size:12.5px;color:var(--blue);margin-top:6px;text-align:center}
+svg.sv{width:100%;height:auto;display:block;overflow:visible}
+.k{stroke:#eaf4ff;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.c{stroke:#8fc7ff;stroke-width:1.1;fill:none;stroke-linecap:butt}
+.h{stroke-dasharray:7 4;stroke-linecap:butt}
+.o{stroke-dasharray:18 4 2 4;stroke-linecap:butt}
+.o2{stroke-dasharray:18 4 2 4 2 4;stroke-linecap:butt}
+.kh{stroke:#eaf4ff;stroke-width:2.4;fill:none;stroke-dasharray:7 4}
+.ko{stroke:#eaf4ff;stroke-width:2.4;fill:none;stroke-dasharray:18 4 2 4}
+.ac{stroke:var(--acc)}
+.ar{fill:#8fc7ff;stroke:none}
+.arA{fill:var(--acc)}
+.t{fill:#eaf4ff;font:12px system-ui,sans-serif}
+.tb{fill:#8fc7ff;font:11px system-ui,sans-serif}
+.ta{fill:var(--acc);font:700 12px system-ui,sans-serif}
+.fT{fill:#2d6bb3}.fF{fill:#1c4f8f}.fR{fill:#143e73}
+.fT.hl{fill:#c8701b}.fF.hl{fill:#e08524}
+.nm{cursor:pointer}
+.nm circle{fill:var(--acc);stroke:#0a2342;stroke-width:1.5}
+.nm text{fill:#1b1200;font:700 11px system-ui,sans-serif;text-anchor:middle}
+ol.lg{list-style:none;padding:0;margin:8px 0;display:grid;gap:6px}
+ol.lg li{display:flex;gap:10px;align-items:flex-start;padding:6px 8px;border-radius:10px;transition:background .3s}
+ol.lg li b{flex:none;width:24px;height:24px;border-radius:50%;background:var(--acc);color:#1b1200;display:grid;place-items:center;font-size:12px}
+ol.lg li.on{background:rgba(255,154,31,.22)}
+.lt{display:grid;gap:8px;margin:10px 0}
+.lt>div{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:center;padding:8px;border-radius:10px;background:rgba(143,199,255,.06)}
+.lt svg{width:96px;height:18px}
+.lt strong{display:block;font-size:14.5px}
+.lt span{font-size:13px;color:var(--blue)}
+table.tb{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
+table.tb th,table.tb td{border:1px solid rgba(143,199,255,.3);padding:6px 8px;text-align:left;vertical-align:top}
+table.tb th{color:var(--acc);font-weight:600;background:rgba(255,154,31,.07)}
+.tip{border-left:3px solid var(--acc);padding:8px 12px;background:rgba(255,154,31,.08);border-radius:0 10px 10px 0;margin:12px 0;font-size:14.5px}
+.try{border:1px solid rgba(255,154,31,.55);background:rgba(40,30,10,.25)}
+.try>h3{color:var(--acc);margin-top:0}
+.seg{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.seg button{flex:1 1 auto;min-height:42px;border-radius:10px;border:1px solid rgba(143,199,255,.45);background:rgba(143,199,255,.08);color:var(--line);font:600 13.5px inherit;font-family:inherit;padding:6px 10px;cursor:pointer}
+.seg button.on{background:var(--acc);color:#1b1200;border-color:var(--acc)}
+.opts{display:grid;gap:8px;margin-top:10px}
+.opt{text-align:left;min-height:48px;padding:10px 12px;border-radius:12px;border:1px solid rgba(143,199,255,.45);background:rgba(143,199,255,.07);color:var(--line);font:15px/1.35 inherit;font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:10px}
+.opt .ltr{flex:none;width:26px;height:26px;border-radius:8px;border:1px solid var(--acc);color:var(--acc);display:grid;place-items:center;font-weight:700;font-size:13px}
+.opt.good{border-color:var(--ok);background:rgba(70,224,154,.15)}
+.opt.wrong{border-color:var(--bad);background:rgba(255,93,108,.15)}
+.opt:disabled{cursor:default}
+.opt svg{max-height:70px}
+.optsv{grid-template-columns:1fr 1fr}
+.optsv .opt{justify-content:center;flex-direction:column;padding:8px;min-height:120px}
+.optsv .opt svg{width:100%;max-height:110px}
+.fb{margin-top:10px;padding:10px 12px;border-radius:10px;font-size:14.5px;animation:pop .25s}
+.fb.good{background:rgba(70,224,154,.13);border:1px solid var(--ok)}
+.fb.wrong{background:rgba(255,93,108,.12);border:1px solid var(--bad)}
+.qhead{display:flex;justify-content:space-between;font-size:13px;color:var(--blue)}
+.dots{display:flex;gap:5px;margin:6px 0 10px}
+.dots i{flex:1;height:5px;border-radius:3px;background:rgba(143,199,255,.2)}
+.dots i.g{background:var(--ok)}.dots i.w{background:var(--bad)}.dots i.c{background:var(--acc)}
+.score{font:700 46px/1 ui-monospace,Menlo,Consolas,monospace;color:var(--acc);text-align:center;margin:10px 0}
+label.fld{display:block;font-size:13px;color:var(--blue);margin-top:8px}
+input.in,select.in{width:100%;min-height:44px;border-radius:10px;border:1px solid rgba(143,199,255,.5);background:rgba(6,26,52,.8);color:var(--line);font:16px inherit;font-family:inherit;padding:8px 10px}
+.out{font:700 22px/1.3 ui-monospace,Menlo,Consolas,monospace;color:var(--acc);margin-top:8px}
+.bgrid{display:grid;grid-template-columns:repeat(3,56px);gap:6px;justify-content:center;margin:8px 0}
+.bgrid button{height:56px;border-radius:10px;border:1px solid rgba(143,199,255,.5);background:rgba(143,199,255,.08);color:var(--line);font:700 20px ui-monospace,monospace;cursor:pointer}
+.bgrid button.h1{background:#1c4f8f}.bgrid button.h2{background:#2d6bb3}.bgrid button.h3{background:#c8701b;color:#1b1200}
+.canvasWrap{position:relative;border:1px solid rgba(143,199,255,.45);border-radius:12px;overflow:hidden;touch-action:none;background:#0b2a50}
+.canvasWrap canvas{display:block;width:100%;touch-action:none}
+.readout{position:absolute;left:8px;top:6px;font:600 12px ui-monospace,monospace;color:var(--acc);background:rgba(6,26,52,.8);padding:2px 6px;border-radius:6px;pointer-events:none}
+.ltsel{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0}
+.ltsel button{flex:none;border-radius:10px;border:1px solid rgba(143,199,255,.45);background:rgba(143,199,255,.08);color:var(--line);font:12px inherit;font-family:inherit;padding:6px 8px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0}
+.ltsel button svg{width:62px;height:12px}
+.ltsel button.on{border-color:var(--acc);background:rgba(255,154,31,.18)}
+/* games */
+.hud{display:flex;align-items:center;justify-content:space-between;gap:8px;font:700 15px ui-monospace,Menlo,monospace}
+.hud .lives{color:var(--bad);letter-spacing:2px;font-size:18px}
+.tbar{height:8px;border-radius:5px;background:rgba(143,199,255,.18);overflow:hidden;margin:8px 0}
+.tbar i{display:block;height:100%;background:var(--acc);transition:width .1s linear}
+.tbar i.low{background:var(--bad)}
+.word{text-align:center;padding:22px 10px;border:1px dashed rgba(143,199,255,.5);border-radius:14px;margin:8px 0;position:relative}
+.word .lang{font-size:12px;color:var(--blue);letter-spacing:.1em}
+.word .w{font:700 26px/1.25 system-ui,sans-serif;margin-top:4px;word-break:break-word}
+.gopts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gopts .opt{min-height:64px;justify-content:center;text-align:center;font-size:14.5px}
+.combo{color:var(--acc)}
+.float{position:absolute;right:14px;top:8px;color:var(--ok);font:800 22px ui-monospace,monospace;animation:fl .8s forwards;pointer-events:none}
+@keyframes fl{to{transform:translateY(-36px);opacity:0}}
+@keyframes pop{from{transform:scale(.96);opacity:.4}to{transform:none;opacity:1}}
+@keyframes shake{20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
+.shake{animation:shake .35s}
+.pulse{animation:pop .3s}
+.mem{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;perspective:800px}
+.mc{position:relative;aspect-ratio:1/1.05;cursor:pointer;border:none;background:none;padding:0}
+.mc .in{position:absolute;inset:0;transition:transform .4s;transform-style:preserve-3d}
+.mc.f .in{transform:rotateY(180deg)}
+.mc .fa,.mc .ba{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:6px;text-align:center}
+.mc .ba{background:repeating-linear-gradient(45deg,rgba(143,199,255,.09) 0 6px,transparent 6px 12px),#0f3566;border:1px solid rgba(143,199,255,.5);color:var(--acc);font:800 24px ui-monospace,monospace}
+.mc .fa{transform:rotateY(180deg);background:#0b2a50;border:1px solid var(--blue);color:var(--line);font:600 13px/1.25 system-ui,sans-serif}
+.mc .fa small{color:var(--acc);display:block;font-size:12px;margin-top:3px}
+.mc .fa svg{width:78%;height:auto}
+.mc.m .fa{border-color:var(--ok);box-shadow:0 0 0 2px rgba(70,224,154,.4) inset}
+.badge{display:inline-block;font-size:12px;border:1px solid var(--acc);color:var(--acc);border-radius:20px;padding:2px 9px}
+.center{text-align:center}
+.hide{display:none!important}
+a{color:var(--acc)}
+ul.clean{padding-left:18px;margin:6px 0}
+ul.clean li{margin:4px 0}
+h3 .nl,.nlsub{font-size:12px;font-weight:500;font-style:italic;color:#ffc46b;margin-left:auto;text-align:right}
+.nlsub{display:block;text-align:left;margin:-4px 0 6px;font-size:13.5px}
+.spk{border:1px solid rgba(143,199,255,.45);background:rgba(143,199,255,.1);border-radius:8px;min-width:32px;height:30px;font-size:14px;cursor:pointer;vertical-align:middle;margin-left:4px;color:var(--line)}
+table.gl td:first-child{white-space:nowrap}
+.fc{display:block;width:100%;height:230px;border:none;background:none;padding:0;perspective:900px;cursor:pointer;margin:6px 0;font-family:inherit}
+.fc .in{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
+.fc.f .in{transform:rotateY(180deg)}
+.fc .ba,.fc .fa{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;text-align:center;color:var(--line)}
+.fc .ba{background:repeating-linear-gradient(0deg,transparent 0 19px,rgba(143,199,255,.08) 19px 20px),#0f3566;border:1px solid rgba(143,199,255,.55)}
+.fc .fa{transform:rotateY(180deg);background:#0b2a50;border:1.5px solid var(--acc)}
+.fc .w{font:700 25px/1.25 system-ui,sans-serif;word-break:break-word}
+.fc .fa .w{font-size:21px;color:#ffd9a3}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<pattern id="p45" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#8fc7ff" stroke-width="1"/></pattern>
+<pattern id="p135" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#8fc7ff" stroke-width="1"/></pattern>
+<pattern id="pBrick" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="#8fc7ff" stroke-width="1"/></pattern>
+<pattern id="pConc" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="4" cy="5" r="1.1" fill="#8fc7ff"/><circle cx="16" cy="3" r=".9" fill="#8fc7ff"/><circle cx="21" cy="15" r="1.1" fill="#8fc7ff"/><circle cx="7" cy="19" r=".9" fill="#8fc7ff"/><circle cx="13" cy="12" r=".8" fill="#8fc7ff"/><path d="M17 20 l4 1 -3 3z M3 10 l4 -1 -1 4z M11 22 l2 -3 2 3z" fill="none" stroke="#8fc7ff" stroke-width=".9"/></pattern>
+<pattern id="pIns" width="12" height="20" patternUnits="userSpaceOnUse"><path d="M0 10 C0 2 6 2 6 10 C6 18 12 18 12 10" fill="none" stroke="#8fc7ff" stroke-width="1"/></pattern>
+</defs></svg>
+<header class="top"><button class="iconbtn" id="back" aria-label="Wstecz">&#8592;</button><h1 id="ttl">Rysunek <span>techniczny</span></h1><button class="iconbtn" id="snd" aria-label="Dźwięk"></button></header>
+<main id="app"></main>
+<nav class="bot" id="nav">
+<a href="#/" data-r="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg>Lekcje</a>
+<a href="#/rzuty" data-r="rzuty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>Rzuty</a>
+<a href="#/szkic" data-r="szkic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20l4-1 11-11-3-3L5 16z M14 7l3 3"/></svg>Szkicownik</a>
+<a href="#/gry" data-r="gry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="11" rx="4"/><path d="M7 10v5M4.5 12.5h5M16 11h.01M18.5 14h.01"/></svg>Gry</a>
+</nav>
+<script>
+'use strict';
+/* ===== utils ===== */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const store={get(k,d){try{const v=localStorage.getItem('rt_'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('rt_'+k,JSON.stringify(v))}catch(e){}}};
+let P=store.get('progress',null)||{done:{},quiz:{},seen:{},views:{best:0},try:{}};
+P.done=P.done||{};P.quiz=P.quiz||{};P.seen=P.seen||{};P.views=P.views||{best:0};P.try=P.try||{};
+const saveP=()=>store.set('progress',P);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const f=n=>Math.round(n*100)/100;
+const LETTERS='ABCDEF';
+let cleanups=[];
+const onCleanup=fn=>cleanups.push(fn);
+
+/* ===== sound ===== */
+let AC=null,muted=store.get('mute',false);
+function beep(fr=660,d=.09,type='sine',vol=.07,delay=0){if(muted)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();const t=AC.currentTime+delay,o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.setValueAtTime(fr,t);g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+d+.03)}catch(e){}}
+const sGood=()=>{beep(660,.08);beep(990,.11,'sine',.07,.07)}, sBad=()=>beep(180,.22,'square',.04), sWin=()=>[523,659,784,1047].forEach((n,i)=>beep(n,.14,'triangle',.07,i*.11));
+function setSnd(){$('#snd').innerHTML=muted?'&#128263;':'&#128266;';$('#snd').title=muted?'Dźwięk wyłączony':'Dźwięk włączony'}
+
+/* ===== SVG helpers ===== */
+const L=(x1,y1,x2,y2,c='c')=>`<line class="${c}" x1="${f(x1)}" y1="${f(y1)}" x2="${f(x2)}" y2="${f(y2)}"/>`;
+const T=(x,y,s,c='t',ex='')=>`<text class="${c}" x="${f(x)}" y="${f(y)}" ${ex}>${s}</text>`;
+const svg=(vb,inner,ex='')=>`<svg class="sv" viewBox="${vb}" xmlns="http://www.w3.org/2000/svg" ${ex}>${inner}</svg>`;
+const fig=(s,cap)=>`<figure class="fig">${s}${cap?`<figcaption>${cap}</figcaption>`:''}</figure>`;
+const num=(x,y,n)=>`<g class="nm" data-n="${n}"><circle cx="${f(x)}" cy="${f(y)}" r="9"/><text x="${f(x)}" y="${f(y+4)}">${n}</text></g>`;
+const legend=items=>`<ol class="lg">${items.map((t,i)=>`<li data-n="${i+1}"><b>${i+1}</b><span>${t}</span></li>`).join('')}</ol>`;
+function arrowHead(x,y,ang,len=9,cls='ar'){const a1=ang+Math.PI-.2618,a2=ang+Math.PI+.2618;return `<polygon class="${cls}" points="${f(x)},${f(y)} ${f(x+len*Math.cos(a1))},${f(y+len*Math.sin(a1))} ${f(x+len*Math.cos(a2))},${f(y+len*Math.sin(a2))}"/>`}
+function tick(x,y,ang){const a=ang-Math.PI/4,l=5;return L(x-l*Math.cos(a),y-l*Math.sin(a),x+l*Math.cos(a),y+l*Math.sin(a),'k')}
+/* aligned dimension between P1,P2; off = signed distance along normal n=(uy,-ux) */
+function dim(x1,y1,x2,y2,off,txt,o={}){
+  const dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy),ux=dx/len,uy=dy/len,nx=uy,ny=-ux,sg=Math.sign(off)||1,gap=o.gap??3;
+  let s='';
+  if(!o.noExt){s+=L(x1+nx*gap*sg,y1+ny*gap*sg,x1+nx*(off+3*sg),y1+ny*(off+3*sg));s+=L(x2+nx*gap*sg,y2+ny*gap*sg,x2+nx*(off+3*sg),y2+ny*(off+3*sg))}
+  const ax=x1+nx*off,ay=y1+ny*off,bx=x2+nx*off,by=y2+ny*off,ang=Math.atan2(uy,ux);
+  if(o.tick){s+=L(ax-ux*5,ay-uy*5,bx+ux*5,by+uy*5);s+=tick(ax,ay,ang)+tick(bx,by,ang)}
+  else{s+=L(ax,ay,bx,by);s+=arrowHead(ax,ay,ang+Math.PI)+arrowHead(bx,by,ang)}
+  let th=ang*180/Math.PI;if(th>=90-1e-6)th-=180;if(th<-90-1e-6)th+=180;const tr=th*Math.PI/180;
+  const upx=Math.sin(tr),upy=-Math.cos(tr),mx=(ax+bx)/2+upx*4,my=(ay+by)/2+upy*4;
+  s+=`<text class="${o.cls||'t'}" x="${f(mx)}" y="${f(my)}" text-anchor="middle" transform="rotate(${f(th)} ${f(mx)} ${f(my)})">${txt}</text>`;
+  return s}
+
+/* ===== voxel / height-map 3D model ===== */
+function mkModel(xs,ys,zs,rows){ // rows: back→front, left→right; values = number of z-cells
+  const h=rows.slice().reverse(),cum=a=>a.reduce((r,v)=>(r.push(r[r.length-1]+v),r),[0]);
+  return {xs,ys,zs,h,X:xs.length,Y:ys.length,Z:zs.length,cx:cum(xs),cy:cum(ys),cz:cum(zs),rows}}
+function unit(rows){const X=rows[0].length,Y=rows.length,Z=Math.max(1,...rows.flat());return mkModel(Array(X).fill(1),Array(Y).fill(1),Array(Z).fill(1),rows)}
+const occ=(m,x,y,z)=>x>=0&&y>=0&&z>=0&&x<m.X&&y<m.Y&&z<m.Z&&z<m.h[y][x];
+const crease=(a,b,c,d)=>{const n=a+b+c+d;return n===1||n===3||(n===2&&a===d)};
+const PERP=[[1,2],[0,2],[0,1]];
+function edges(m){
+  if(m._E)return m._E;const E=[],o=(x,y,z)=>occ(m,x,y,z)?1:0;
+  for(let i=0;i<m.X;i++)for(let j=0;j<=m.Y;j++)for(let k=0;k<=m.Z;k++)if(crease(o(i,j-1,k-1),o(i,j,k-1),o(i,j-1,k),o(i,j,k)))E.push({ax:0,p:[i,j,k],q:[i+1,j,k]});
+  for(let j=0;j<m.Y;j++)for(let i=0;i<=m.X;i++)for(let k=0;k<=m.Z;k++)if(crease(o(i-1,j,k-1),o(i,j,k-1),o(i-1,j,k),o(i,j,k)))E.push({ax:1,p:[i,j,k],q:[i,j+1,k]});
+  for(let k=0;k<m.Z;k++)for(let i=0;i<=m.X;i++)for(let j=0;j<=m.Y;j++)if(crease(o(i-1,j-1,k),o(i,j-1,k),o(i-1,j,k),o(i,j,k)))E.push({ax:2,p:[i,j,k],q:[i,j,k+1]});
+  return m._E=E}
+const C30=Math.cos(Math.PI/6);
+const isoP=(x,y,z,s)=>[(x+y)*C30*s,(x-y)*.5*s-z*s];
+/* isometric drawing with painter's algorithm + true crease edges */
+function isoSVG(m,o={}){
+  const s=o.s||1,G=(i,j,k)=>isoP(m.cx[i],m.cy[j],m.cz[k],s);
+  const vox=[];for(let z=0;z<m.Z;z++)for(let y=0;y<m.Y;y++)for(let x=0;x<m.X;x++)if(occ(m,x,y,z))vox.push([x,y,z]);
+  vox.sort((a,b)=>(a[0]-a[1]+a[2])-(b[0]-b[1]+b[2]));
+  const idx={};vox.forEach((v,n)=>idx[v.join()]=n);const per=vox.map(()=>[]);
+  for(const e of edges(m)){const [u,v]=PERP[e.ax];let best=-1,vis=false;
+    for(const du of[-1,0])for(const dv of[-1,0]){const c=e.p.slice();c[u]+=du;c[v]+=dv;if(!occ(m,...c))continue;const n=idx[c.join()];if(n>best)best=n;
+      for(const [ax,d] of[[u,du],[v,dv]]){const sg=d===-1?1:-1,nb=c.slice();nb[ax]+=sg;if(!occ(m,...nb)&&((ax===2&&sg>0)||(ax===1&&sg<0)||(ax===0&&sg>0)))vis=true}}
+    if(vis&&best>=0)per[best].push(e)}
+  let body='',xs=[],ys=[];const poly=(pts,cls)=>{pts.forEach(p=>{xs.push(p[0]);ys.push(p[1])});return `<polygon class="${cls}" stroke-width=".6" points="${pts.map(p=>f(p[0])+','+f(p[1])).join(' ')}"/>`};
+  const hl=o.hl||'';
+  vox.forEach(([x,y,z],n)=>{
+    if(!occ(m,x,y-1,z))body+=poly([G(x,y,z),G(x+1,y,z),G(x+1,y,z+1),G(x,y,z+1)],'fF'+(hl==='F'?' hl':'')).replace('<polygon','<polygon stroke="'+(hl==='F'?'#e08524':'#1c4f8f')+'"');
+    if(!occ(m,x+1,y,z))body+=poly([G(x+1,y,z),G(x+1,y+1,z),G(x+1,y+1,z+1),G(x+1,y,z+1)],'fR').replace('<polygon','<polygon stroke="#143e73"');
+    if(!occ(m,x,y,z+1))body+=poly([G(x,y,z+1),G(x+1,y,z+1),G(x+1,y+1,z+1),G(x,y+1,z+1)],'fT'+(hl==='T'?' hl':'')).replace('<polygon','<polygon stroke="'+(hl==='T'?'#c8701b':'#2d6bb3')+'"');
+    for(const e of per[n]){const a=G(...e.p),b=G(...e.q);body+=L(a[0],a[1],b[0],b[1],'k')}});
+  const W=m.cx[m.X],D=m.cy[m.Y],H=m.cz[m.Z];let extra='';
+  const arr=(p0,p1,lab,on)=>{const a=isoP(...p0,s),b=isoP(...p1,s);xs.push(a[0],b[0]);if(lab.length>1){xs.push(a[0]-58);ys.push(a[1]+14)}ys.push(a[1],b[1]);const ang=Math.atan2(b[1]-a[1],b[0]-a[0]);
+    return `<line x1="${f(a[0])}" y1="${f(a[1])}" x2="${f(b[0])}" y2="${f(b[1])}" stroke="${on?'#ff9a1f':'#8fc7ff'}" stroke-width="${on?2.4:1.4}"/>`+arrowHead(b[0],b[1],ang,11,on?'arA':'ar')+(lab.length>1?`<text class="ta" x="${f(a[0]-4)}" y="${f(a[1]+12)}" text-anchor="end" style="font-size:13px">${lab}</text>`:`<text class="${on?'ta':'tb'}" x="${f(a[0])}" y="${f(a[1]-6)}" text-anchor="middle" style="font-size:13px">${lab}</text>`)};
+  const Lr=.55*Math.max(W,D,H),e=.06*Math.max(W,D,H);
+  if(o.arrows){extra+=arr([W*.5,-Lr,H*.45],[W*.5,-e,H*.45],'A',o.sel==='F');extra+=arr([W*.4,D*.5,H+Lr],[W*.4,D*.5,H+e],'B',o.sel==='T');extra+=arr([-Lr,D*.5,H*.55],[-e,D*.5,H*.55],'C',o.sel==='L')}
+  if(o.front){extra+=arr([W*.5,-Lr*.9,0],[W*.5,-e,0],'PRZÓD',true)}
+  if(!xs.length)return svg('0 0 100 60',T(50,34,'(pusto)','tb','text-anchor="middle"'));
+  const pad=o.pad??14,mnx=Math.min(...xs)-pad,mny=Math.min(...ys)-pad-(o.arrows||o.front?10:0),w=Math.max(...xs)+pad-mnx,h=Math.max(...ys)+pad-mny;
+  return svg(`${f(mnx)} ${f(mny)} ${f(w)} ${f(h)}`,body+extra,o.ex||'')}
+/* orthographic views with visible + hidden edges. v: F=front(A), T=top(B), L=from left(C) */
+function viewSegs(m,v){
+  const I=1e9;
+  const DF=(x,z)=>{if(x<0||x>=m.X||z<0||z>=m.Z)return I;for(let y=0;y<m.Y;y++)if(occ(m,x,y,z))return y;return I};
+  const DT=(x,y)=>{if(x<0||x>=m.X||y<0||y>=m.Y)return -I;return m.h[y][x]>0?m.h[y][x]:-I};
+  const DL=(y,z)=>{if(y<0||y>=m.Y||z<0||z>=m.Z)return I;for(let x=0;x<m.X;x++)if(occ(m,x,y,z))return x;return I};
+  const mp=new Map(),add=(o,c,a,vis)=>{const k=o+'|'+c+'|'+a;mp.set(k,!!(mp.get(k)||vis))};
+  for(const e of edges(m)){const [i,j,k]=e.p;
+    if(v==='F'){if(e.ax===0)add('H',k,i,j<=Math.min(DF(i,k-1),DF(i,k)));else if(e.ax===2)add('V',i,k,j<=Math.min(DF(i-1,k),DF(i,k)))}
+    else if(v==='T'){if(e.ax===0)add('H',j,i,k>=Math.max(DT(i,j-1),DT(i,j)));else if(e.ax===1)add('V',i,j,k>=Math.max(DT(i-1,j),DT(i,j)))}
+    else{if(e.ax===1)add('H',k,j,i<=Math.min(DL(j,k-1),DL(j,k)));else if(e.ax===2)add('V',j,k,i<=Math.min(DL(j-1,k),DL(j,k)))}}
+  const gr={};for(const [k,vis] of mp){const [o,c,a]=k.split('|');(gr[o+'|'+c+'|'+(vis?1:0)]=gr[o+'|'+c+'|'+(vis?1:0)]||[]).push(+a)}
+  const out=[];for(const g in gr){const [o,c,vv]=g.split('|'),arr=gr[g].sort((a,b)=>a-b);let st=arr[0],en=st+1;
+    for(let n=1;n<=arr.length;n++){if(n<arr.length&&arr[n]===en)en++;else{out.push({o,c:+c,a:st,b:en,vis:vv==='1'});if(n<arr.length){st=arr[n];en=st+1}}}}
+  return out.sort((a,b)=>a.vis-b.vis)}
+function viewDims(m,v){const W=m.cx[m.X],D=m.cy[m.Y],H=m.cz[m.Z];
+  if(v==='F')return{w:W,h:H,U:i=>m.cx[i],V:k=>H-m.cz[k]};
+  if(v==='T')return{w:W,h:D,U:i=>m.cx[i],V:j=>D-m.cy[j]};
+  return{w:D,h:H,U:j=>D-m.cy[j],V:k=>H-m.cz[k]}}
+function viewG(m,v,s,ox=0,oy=0){const d=viewDims(m,v);let g='';
+  for(const q of viewSegs(m,v)){let x1,y1,x2,y2;if(q.o==='H'){x1=d.U(q.a);x2=d.U(q.b);y1=y2=d.V(q.c)}else{x1=x2=d.U(q.c);y1=d.V(q.a);y2=d.V(q.b)}
+    g+=L(ox+x1*s,oy+y1*s,ox+x2*s,oy+y2*s,q.vis?'k':'c h')}
+  return{g,w:d.w*s,h:d.h*s}}
+function viewSVG(m,v,o={}){const s=o.s||1,pad=o.pad??10,r=viewG(m,v,s,0,0);return svg(`${-pad} ${-pad} ${f(r.w+2*pad)} ${f(r.h+2*pad)}`,r.g,o.ex||'')}
+/* arrangement of the 3 views in European method E (first angle) */
+function layoutE(m,o={}){const s=o.s||1,gap=o.gap||28,d=viewDims(m,'F'),W=d.w*s,H=d.h*s,D=m.cy[m.Y]*s;
+  let g='';const F=viewG(m,'F',s,0,0),Tp=viewG(m,'T',s,0,H+gap),Lf=viewG(m,'L',s,W+gap,0);
+  if(o.links){const lk=(a,b,c,e)=>`<line x1="${f(a)}" y1="${f(b)}" x2="${f(c)}" y2="${f(e)}" stroke="#6f9fd6" stroke-width=".7" stroke-dasharray="2 3"/>`;
+    g+=lk(0,H,0,H+gap)+lk(W,H,W,H+gap)+lk(W,0,W+gap,0)+lk(W,H,W+gap,H);
+    // 45° mitre line linking top view depth with side view depth
+    g+=`<line x1="${f(W+gap)}" y1="${f(H+gap)}" x2="${f(W+gap+D+10)}" y2="${f(H+gap+D+10)}" stroke="#6f9fd6" stroke-width=".7" stroke-dasharray="2 3"/>`;
+    g+=lk(W,H+gap,W+gap,H+gap)+lk(W,H+gap+D,W+gap+D,H+gap+D)+lk(W+gap+D,H,W+gap+D,H+gap+D)}
+  g+=F.g+Tp.g+Lf.g;
+  if(o.labels!==false){g+=T(W/2,-8,'A – rzut główny','ta','text-anchor="middle"')+T(W/2,H+gap+D+16,'B – z góry','ta','text-anchor="middle"')+T(W+gap+D/2,-8,'C – z lewej','ta','text-anchor="middle"')}
+  return svg(`-14 -24 ${f(W+gap+D+28)} ${f(H+gap+D+48)}`,g)}
+/* projection method E symbol (ISO 5456-2, first angle): narrow end of the cone points away from the circles */
+function symE(x,y,s=1){const g=`<g transform="translate(${x} ${y}) scale(${s})">${L(0,10,0,30,'k')}${L(30,0,30,40,'k')}${L(0,10,30,0,'k')}${L(0,30,30,40,'k')}${L(-6,20,36,20,'c o')}<circle cx="62" cy="20" r="20" class="k"/><circle cx="62" cy="20" r="10" class="k"/>${L(36,20,88,20,'c o')}${L(62,-6,62,46,'c o')}</g>`;return g}
+/* ===== shared figures ===== */
+const LINE_TYPES={
+  k:{n:'Ciągła gruba',u:'widoczne krawędzie i zarysy'},
+  c:{n:'Ciągła cienka',u:'linie wymiarowe i pomocnicze, kreskowanie, linie odniesienia'},
+  h:{n:'Kreskowa cienka',u:'niewidoczne (zakryte) krawędzie i zarysy'},
+  o:{n:'Punktowa cienka',u:'osie symetrii, osie otworów, okręgi podziałowe'},
+  ko:{n:'Punktowa gruba',u:'oznaczenie płaszczyzny przekroju (odcinki końcowe), powierzchnie do obróbki specjalnej'},
+  o2:{n:'Dwupunktowa cienka',u:'skrajne położenia części ruchomych, zarysy części sąsiednich, linie gięcia'},
+  w:{n:'Falista cienka',u:'urwanie przedmiotu, granica przekroju cząstkowego'}};
+function lineSample(t,w=96){const cls={k:'k',c:'c',h:'c h',o:'c o',ko:'ko',o2:'c o2'}[t];
+  if(t==='w')return `<svg viewBox="0 0 ${w} 18" class="ls"><path class="c" d="M4 9 C14 2 20 2 28 9 S44 16 52 9 S68 2 76 9 S88 14 ${w-4} 9"/></svg>`;
+  return `<svg viewBox="0 0 ${w} 18" class="ls"><line class="${cls}" x1="4" y1="9" x2="${w-4}" y2="9" style="${t==='k'||t==='ko'?'stroke-linecap:butt':''}"/></svg>`}
+function swatch(kind){let inner='';const r='<rect x="2" y="2" width="96" height="52" class="k" style="stroke-width:1.8"/>';
+  if(kind==='metal')inner=`<rect x="2" y="2" width="96" height="52" fill="url(#p45)"/>`;
+  if(kind==='beton')inner=`<rect x="2" y="2" width="96" height="52" fill="url(#pConc)"/>`;
+  if(kind==='mur')inner=`<rect x="2" y="2" width="96" height="52" fill="url(#pBrick)"/>`;
+  if(kind==='izol')inner=`<rect x="2" y="2" width="96" height="52" fill="url(#pIns)"/>`;
+  if(kind==='drewno'){const id='cw'+Math.random().toString(36).slice(2,7);inner=`<clipPath id="${id}"><rect x="2" y="2" width="96" height="52"/></clipPath><g clip-path="url(#${id})">${[10,20,31,43,56,70,85,101].map(r=>`<circle cx="18" cy="66" r="${r}" class="c"/>`).join('')}</g>`}
+  if(kind==='drewnoW')inner=[12,22,32,42].map((y,i)=>`<path class="c" d="M2 ${y} C25 ${y-4-i} 45 ${y+5} 70 ${y} S90 ${y-3} 98 ${y}"/>`).join('');
+  return `<svg viewBox="0 0 100 56" class="sv">${inner}${r}</svg>`}
+const SW_NAMES={metal:'ogólny / metal (45°)',drewno:'drewno – przekrój poprzeczny',drewnoW:'drewno – wzdłuż włókien',beton:'beton',mur:'mur z cegły',izol:'izolacja termiczna (wełna)'};
+const SW_NL={metal:'staal',drewno:'hout',drewnoW:'hout',beton:'beton',mur:'metselwerk',izol:'isolatie'};
+
+const LPART=mkModel([30,30],[20,20],[20,20],[[2,1],[2,0]]);
+
+function figLinesOnPart(){
+  let s=`<rect x="70" y="30" width="180" height="90" class="k"/>`+L(145,30,145,120,'c h')+L(175,30,175,120,'c h')+L(160,18,160,132,'c o')+dim(70,120,250,120,-30,'60');
+  s+=num(92,50,1)+num(190,100,2)+num(176,18,3)+num(105,158,4);
+  return fig(svg('20 0 300 175',s),'Linie na rysunku płytki z ukrytym otworem')+legend(['ciągła gruba – widoczny zarys płytki','kreskowa cienka – zakryte krawędzie otworu','punktowa cienka – oś otworu','ciągła cienka – linia wymiarowa i pomocnicze'])}
+function figLettering(){
+  let s=L(20,95,250,95,'c')+L(20,45,250,45,'c')+`<line x1="20" y1="60" x2="250" y2="60" class="c h"/>`;
+  s+=`<text x="70" y="95" transform="skewX(-15)" style="font:400 70px system-ui,sans-serif;fill:#eaf4ff;letter-spacing:4px">Ax 75</text>`;
+  s+=dim(268,95,268,45,0,'h',{noExt:true,cls:'ta'})+dim(305,95,305,60,0,'c',{noExt:true,cls:'ta'});
+  return fig(svg('0 30 340 80',s),'Pismo techniczne pochyłe (75°): h – wysokość wielkich liter, c ≈ 0,7·h – wysokość małych liter (schemat)')}
+function figFormats(){
+  let s=`<rect x="20" y="24" width="300" height="212.1" class="k"/>`+L(170,24,170,236,'k')+L(170,130,320,130,'k')+L(245,130,245,236,'k')+L(245,183,320,183,'k');
+  const lb=(x,y,a,b)=>T(x,y,a,'ta','text-anchor="middle" style="font-size:15px"')+T(x,y+15,b,'tb','text-anchor="middle"');
+  s+=T(170,16,'A0 = 841 × 1189 mm (1 m²)','ta','text-anchor="middle"')+lb(95,125,'A1','594 × 841')+lb(245,72,'A2','420 × 594')+lb(207,178,'A3','297 × 420')+lb(282,152,'A4','210 × 297')+T(282,214,'A4','ta','text-anchor="middle" style="font-size:15px"');
+  return fig(svg('0 0 340 245',s),'Każdy mniejszy format to połowa poprzedniego (dłuższy bok dzielimy na pół)')}
+function figSheet(){
+  let s=`<rect x="23" y="10" width="294" height="207.9" class="c"/><rect x="37" y="17" width="273" height="193.9" class="k"/><rect x="184" y="185.7" width="126" height="25.2" class="k" fill="rgba(255,154,31,.15)"/>`;
+  s+=L(170,10,170,22,'k')+L(170,205.9,170,217.9,'k')+L(23,114,42,114,'k')+L(305,114,317,114,'k');
+  s+=T(247,201,'tabliczka','ta','text-anchor="middle"')+T(173,60,'pole rysunku','tb','text-anchor="middle"');
+  s+=num(60,40,1)+num(110,30,2)+num(190,170,3)+num(180,30,4);
+  return fig(svg('15 0 310 225',s),'Arkusz A3 poziomo')+legend(['krawędź arkusza (linia cienka)','ramka – linia gruba: 20 mm od lewej (do wpięcia), 10 mm z pozostałych stron','tabliczka rysunkowa – zawsze w prawym dolnym rogu ramki','znaki centrujące na środkach boków'])}
+function figTitleBlock(){
+  const c=(x,y,w,h,lab,val,big)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" class="c" style="stroke:#eaf4ff;stroke-width:1.3"/>`+T(x+4,y+10,lab,'tb','style="font-size:9px"')+T(x+4,y+h-7,val,big?'ta':'t',big?'style="font-size:17px"':'');
+  let s=c(10,10,110,27.5,'Narysował','J. Kowalski')+c(10,37.5,110,27.5,'Sprawdził','M. Nowak')+c(10,65,110,27.5,'Data','2026-10-09')+c(10,92.5,110,27.5,'Materiał','sosna, 18 mm');
+  s+=c(120,10,200,55,'Nazwa rysunku','TABORET – SIEDZISKO',true)+c(120,65,120,27.5,'Nr rysunku','KMK-001-03')+c(240,65,80,27.5,'Arkusz','1 / 1');
+  s+=c(120,92.5,70,27.5,'Skala','1 : 5')+c(190,92.5,70,27.5,'Metoda','')+c(260,92.5,60,27.5,'Format','A4');
+  s+=symE(215,105,.28);
+  s+=`<rect x="10" y="10" width="310" height="110" fill="none" stroke="#eaf4ff" stroke-width="2.6"/>`;
+  return fig(svg('0 0 330 130',s),'Przykładowa tabliczka rysunkowa / stempel (wg PN-EN ISO 7200)')}
+function figScales(){
+  let s='';const sq=(x,y,a)=>`<rect x="${x}" y="${y}" width="${a}" height="${a}" class="k"/>`+dim(x,y,x+a,y,12,'20');
+  s+=sq(30,40,80)+sq(150,80,40)+sq(262,100,20);
+  s+=T(70,145,'2 : 1','ta','text-anchor="middle"')+T(70,159,'powiększenie','tb','text-anchor="middle"')+T(170,145,'1 : 1','ta','text-anchor="middle"')+T(170,159,'naturalna','tb','text-anchor="middle"')+T(272,145,'1 : 2','ta','text-anchor="middle"')+T(272,159,'pomniejszenie','tb','text-anchor="middle"');
+  return fig(svg('0 10 340 155',s),'Ten sam kwadrat 20 × 20 mm w trzech skalach – liczba wymiarowa zawsze „20”')}
+function figPlate(){
+  let s=`<path class="k" d="M60,60 H235 A25,25 0 0 1 260,85 V185 H60 Z"/><circle cx="170" cy="122.5" r="25" class="k"/>`;
+  s+=L(135,122.5,205,122.5,'c o')+L(170,87.5,170,157.5,'c o');
+  s+=dim(60,185,260,185,-25,'80')+dim(60,185,60,60,25,'50')+L(170,87.5,170,60,'c')+dim(60,60,170,60,20,'40');
+  s+=L(205,122.5,257,122.5,'c')+dim(260,185,260,122.5,-22,'25');
+  const px=170+17.68,py=122.5+17.68;s+=L(px,py,212,165)+L(212,165,244,165)+arrowHead(px,py,Math.atan2(py-165,px-212))+T(228,161,'⌀20','t','text-anchor="middle"');
+  const ax=235+17.68,ay=85-17.68;s+=L(ax,ay,280,40)+arrowHead(ax,ay,Math.atan2(ay-40,ax-280))+T(292,36,'R10','t','text-anchor="middle"');
+  s+=num(108,222,1)+num(48,222,2)+num(272,216,3)+num(186,198,4)+num(182,96,5)+num(196,177,6)+num(312,52,7);
+  return fig(svg('15 15 320 225',s),'Płytka 80 × 50 mm z otworem ⌀20 i zaokrągleniem R10 (wymiary w mm)')+
+  legend(['linia wymiarowa – cienka, równoległa do mierzonego odcinka, ok. 10 mm od zarysu','linia pomocnicza – cienka, prostopadła, wystaje ok. 2 mm za linię wymiarową','grot (strzałka) – zamknięty, zaczernony, kąt ostrza ok. 30°','liczba wymiarowa – nad linią, czytelna od dołu lub od prawej strony; bez „mm”','oś otworu (linia punktowa) – można ją przedłużyć jako linię pomocniczą, ale nigdy nie jest linią wymiarową','znak ⌀ – średnica (otwory, wałki, kołki)','R – promień łuku (zaokrąglenia)'])}
+function figBuildDims(){
+  let s=`<rect x="20" y="20" width="100" height="12" fill="url(#pBrick)"/><rect x="160" y="20" width="160" height="12" fill="url(#pBrick)"/>`+L(20,20,120,20,'k')+L(20,32,120,32,'k')+L(160,20,320,20,'k')+L(160,32,320,32,'k')+L(120,20,120,32,'k')+L(160,20,160,32,'k')+L(120,24.5,160,24.5)+L(120,27.5,160,27.5)+L(120,20,160,20)+L(120,32,160,32);
+  s+=dim(20,32,120,32,-24,'2500',{tick:true})+dim(120,32,160,32,-24,'1000',{tick:true})+dim(160,32,320,32,-24,'4000',{tick:true})+dim(20,32,320,32,-48,'7500',{tick:true});
+  return fig(svg('5 10 330 80',s),'Rysunek budowlany: łańcuch wymiarowy z ukośnymi kreskami (ściana z otworem okiennym)')}
+function figSection(){
+  let s=`<rect x="70" y="40" width="80" height="50" fill="url(#p45)"/><rect x="190" y="40" width="80" height="50" fill="url(#p45)"/>`;
+  s+=`<path class="k" d="M150,40 H70 V90 H150 Z M190,40 H270 V90 H190 Z"/>`+L(170,30,170,100,'c o')+T(170,22,'A–A','ta','text-anchor="middle" style="font-size:14px"');
+  s+=`<rect x="70" y="140" width="200" height="100" class="k"/><circle cx="170" cy="190" r="20" class="k"/>`+L(64,190,276,190,'c o')+L(170,162,170,218,'c o');
+  s+=L(48,190,64,190,'k')+L(276,190,292,190,'k')+L(56,190,56,168,'c')+arrowHead(56,166,-Math.PI/2,10)+L(284,190,284,168,'c')+arrowHead(284,166,-Math.PI/2,10)+T(44,172,'A','ta','style="font-size:14px"')+T(290,172,'A','ta','style="font-size:14px"');
+  s+=num(110,110,1)+num(305,190,2)+num(30,165,3)+num(200,60,4);
+  return fig(svg('20 10 300 240',s),'Rzut z góry (bovenaanzicht) płytki z otworem i przekrój A–A (doorsnede A–A)')+legend(['przekrój A–A – miejsca, gdzie płaszczyzna tnie materiał, kreskujemy','płaszczyzna przekroju – linia punktowa cienka z grubymi odcinkami na końcach','strzałki pokazują kierunek patrzenia, litery – nazwę przekroju','w miejscu otworu nie ma materiału – brak kreskowania, widać krawędzie otworu'])}
+function figMaterials(){
+  const k=['metal','drewno','drewnoW','beton','mur','izol'];let s='';
+  k.forEach((m,i)=>{const x=10+(i%3)*110,y=8+Math.floor(i/3)*92;s+=`<g transform="translate(${x} ${y})">${swatch(m).replace('<svg viewBox="0 0 100 56" class="sv">','<svg width="100" height="56" viewBox="0 0 100 56">')}</g>`+T(x+50,y+72,SW_NAMES[m].split(' – ')[0],'t','text-anchor="middle" style="font-size:11px"')+(SW_NAMES[m].includes(' – ')?T(x+50,y+85,SW_NAMES[m].split(' – ')[1],'tb','text-anchor="middle" style="font-size:10px"'):'')});
+  return fig(svg('0 0 340 190',s),'Typowe oznaczenia materiałów w przekroju (NL: arceringen)')}
+function figAxes(){
+  let s='';const O=[85,95],R=70;
+  s+=`<line x1="15" y1="95" x2="155" y2="95" class="c h"/>`+L(O[0],O[1],O[0],O[1]-75,'k')+L(O[0],O[1],O[0]-R*C30,O[1]+R*.5,'k')+L(O[0],O[1],O[0]+R*C30,O[1]+R*.5,'k');
+  s+=T(91,26,'z','ta')+T(14,138,'x','ta')+T(150,138,'y','ta');
+  s+=`<path class="c ac" d="M ${O[0]-40} ${O[1]} A 40 40 0 0 0 ${f(O[0]-40*C30)} ${O[1]+20}"/>`+T(30,110,'30°','ta','style="font-size:11px"');
+  s+=T(85,140,'120°','t','text-anchor="middle"')+T(115,70,'120°','t','text-anchor="middle"')+T(55,70,'120°','t','text-anchor="middle"');
+  s+=T(85,165,'Izometria','ta','text-anchor="middle" style="font-size:14px"')+T(85,180,'x : y : z = 1 : 1 : 1','tb','text-anchor="middle"');
+  const Q=[215,110];s+=L(Q[0],Q[1],Q[0],Q[1]-80,'k')+L(Q[0],Q[1],Q[0]+100,Q[1],'k')+L(Q[0],Q[1],Q[0]+60*Math.SQRT1_2,Q[1]-60*Math.SQRT1_2,'k');
+  s+=T(221,36,'z','ta')+T(312,124,'x','ta')+T(262,62,'y','ta')+`<path class="c ac" d="M ${Q[0]+36} ${Q[1]} A 36 36 0 0 0 ${f(Q[0]+36*Math.SQRT1_2)} ${f(Q[1]-36*Math.SQRT1_2)}"/>`+T(256,104,'45°','ta','style="font-size:11px"');
+  s+=T(260,165,'Dimetria ukośna','ta','text-anchor="middle" style="font-size:14px"')+T(260,180,'x : y : z = 1 : 0,5 : 1','tb','text-anchor="middle"');
+  return fig(svg('0 15 340 175',s),'Osie aksonometryczne')}
+function figCubes(){
+  let s='';const a=[-50*C30,-25],b=[50*C30,-25],P0=[85,150],add=(p,q,k=1)=>[p[0]+q[0]*k,p[1]+q[1]*k];
+  const P1=add(P0,a),P2=add(P0,b),P3=add(P1,b),up=p=>[p[0],p[1]-50],Ln=(p,q,c='k')=>L(p[0],p[1],q[0],q[1],c);
+  s+=Ln(P1,P3,'c h')+Ln(P2,P3,'c h')+Ln(P3,up(P3),'c h');
+  s+=Ln(P0,P1)+Ln(P0,P2)+Ln(P1,up(P1))+Ln(P2,up(P2))+Ln(P0,up(P0))+Ln(up(P0),up(P1))+Ln(up(P0),up(P2))+Ln(up(P1),up(P3))+Ln(up(P2),up(P3));
+  s+=`<ellipse cx="85" cy="75" rx="30.6" ry="17.7" class="k ac" style="stroke:#ff9a1f;stroke-width:1.8"/>`;
+  s+=T(85,172,'okrąg → elipsa','tb','text-anchor="middle"');
+  const F=[210,70],d=[25*Math.SQRT1_2,-25*Math.SQRT1_2],B=add(F,d);
+  s+=L(B[0],B[1]+50,F[0],F[1]+50,'c h')+L(B[0],B[1]+50,B[0]+50,B[1]+50,'c h')+L(B[0],B[1],B[0],B[1]+50,'c h');
+  s+=`<rect x="210" y="70" width="50" height="50" class="k"/>`+L(210,70,B[0],B[1],'k')+L(260,70,B[0]+50,B[1],'k')+L(260,120,B[0]+50,B[1]+50,'k')+L(B[0],B[1],B[0]+50,B[1],'k')+L(B[0]+50,B[1],B[0]+50,B[1]+50,'k');
+  s+=`<circle cx="235" cy="95" r="20" fill="none" style="stroke:#ff9a1f;stroke-width:1.8"/>`+T(242,172,'okrąg z przodu = okrąg','tb','text-anchor="middle"');
+  return fig(svg('20 30 300 150',s),'Sześcian 50 mm z okręgiem: izometria (lewy) i dimetria ukośna (prawy, głębokość 25 mm)')}
+function figPlan(){
+  let s=`<rect x="40" y="40" width="120" height="12" fill="url(#pBrick)"/><rect x="240" y="40" width="60" height="12" fill="url(#pBrick)"/><rect x="40" y="228" width="60" height="12" fill="url(#pBrick)"/><rect x="136" y="228" width="164" height="12" fill="url(#pBrick)"/><rect x="40" y="52" width="12" height="176" fill="url(#pBrick)"/><rect x="288" y="52" width="12" height="176" fill="url(#pBrick)"/>`;
+  s+=`<path class="k" d="M100,240 H40 V40 H160 M240,40 H300 V240 H136 M100,228 H52 V52 H160 M240,52 H288 V228 H136 M100,228 V240 M136,228 V240 M160,40 V52 M240,40 V52"/>`;
+  s+=L(160,40,240,40)+L(160,52,240,52)+L(160,44.5,240,44.5)+L(160,47.5,240,47.5);
+  s+=L(100,228,100,192,'k')+`<path class="c" d="M100,192 A36,36 0 0 1 136,228"/>`;
+  s+=`<rect x="236" y="120" width="52" height="108" class="c"/>`;for(let y=132;y<228;y+=12)s+=L(236,y,288,y);
+  s+=`<circle cx="262" cy="222" r="2.5" fill="#8fc7ff"/>`+L(262,222,262,132)+arrowHead(262,126,-Math.PI/2,9);
+  s+=L(46,18,46,250,'c o')+L(294,18,294,250,'c o')+L(18,46,322,46,'c o')+L(18,234,322,234,'c o');
+  const bub=(x,y,t)=>`<circle cx="${x}" cy="${y}" r="8" class="c" style="stroke:#eaf4ff" fill="#0a2342"/>`+T(x,y+4,t,'t','text-anchor="middle" style="font-size:10px"');
+  s+=bub(46,10,'1')+bub(294,10,'2')+bub(10,46,'A')+bub(10,234,'B');
+  s+=`<path d="M96,138 L104,138 L100,145 Z" fill="none" class="c" style="stroke:#eaf4ff"/>`+L(92,145,140,145)+T(106,140,'±0,00 = P','t','style="font-size:10px"');
+  s+=dim(40,240,100,240,-22,'1500',{tick:true})+dim(100,240,136,240,-22,'900',{tick:true})+dim(136,240,300,240,-22,'4100',{tick:true})+dim(40,240,300,240,-44,'6500',{tick:true});
+  s+=L(26,165,38,165,'k')+L(302,165,314,165,'k')+L(32,165,32,152)+arrowHead(32,150,-Math.PI/2,8)+L(308,165,308,152)+arrowHead(308,150,-Math.PI/2,8)+T(20,160,'C','ta')+T(314,160,'C','ta');
+  s+=`<circle cx="324" cy="104" r="10" class="c" style="stroke:#eaf4ff"/><path d="M324,92 L329,110 L324,106 L319,110 Z" fill="#ff9a1f"/>`+T(324,88,'N','ta','text-anchor="middle"');
+  s+=num(46,140,1)+num(122,205,2)+num(200,64,3)+num(250,108,4)+num(70,18,5)+num(150,160,6)+num(330,272,7)+num(324,130,8)+num(318,186,9);
+  return fig(svg('0 0 342 292',s),'Uproszczony rzut pomieszczenia (oryginał w skali 1:50, wymiary w mm)')+
+  legend(['ściana murowana – zarys grubą linią, wnętrze zakreskowane (materiał)','drzwi – skrzydło i łuk pokazujący kierunek otwierania (NL: deur, draairichting)','okno – cienkie linie w otworze ściany (NL: raam / kozijn)','schody – kropka na pierwszym stopniu, strzałka w kierunku wchodzenia (NL: trap)','oś konstrukcyjna – linia punktowa z kółkiem i oznaczeniem 1, 2… / A, B… (NL: stramien)','poziom odniesienia ±0,00 – zwykle wierzch posadzki parteru (NL: peil, P)','łańcuch wymiarowy z ukośnymi kreskami – wymiary w mm (NL) lub cm (PL)','strzałka północy','linia przekroju C–C – strzałki pokazują kierunek patrzenia (NL: doorsnede)'])}
+
+/* ===== LESSONS ===== */
+const LESSONS=[
+{id:1,nl:'Lijnsoorten en normschrift',t:'Linie i pismo techniczne',d:'Rodzaje linii, grubości i pismo',
+ body:()=>`<p>Rysunek techniczny to wspólny język projektanta, stolarza i budowlańca. Każdy rodzaj linii ma <b class="a">swoje znaczenie</b> (PN-EN ISO 128). Stosujemy dwie grubości linii – <b>grubą</b> i <b>cienką</b> – w stosunku <b class="a">2 : 1</b>.</p>
+ <h3><span class="no">01</span>Rodzaje linii<span class="nl">Lijnsoorten</span></h3>
+ <div class="lt">${Object.keys(LINE_TYPES).map(k=>`<div>${lineSample(k)}<div><strong>${LINE_TYPES[k].n}</strong><span>${LINE_TYPES[k].u}</span></div></div>`).join('')}</div>
+ <h3><span class="no">02</span>Linie na rysunku</h3>${figLinesOnPart()}
+ <h3><span class="no">03</span>Grubości linii<span class="nl">Lijndikte</span></h3>
+ <p>Szereg grubości (mm): 0,13 · 0,18 · 0,25 · 0,35 · <b class="a">0,5</b> · 0,7 · 1 · 1,4 · 2. Najczęściej używa się pary <b>0,5 / 0,25 mm</b> lub <b>0,7 / 0,35 mm</b>.</p>
+ <p>Gdy dwie linie się pokrywają, rysujemy tę ważniejszą: krawędź widoczna → niewidoczna → oś → linia pomocnicza.</p>
+ <h3><span class="no">04</span>Pismo techniczne<span class="nl">Normschrift</span></h3>${figLettering()}
+ <p>Pismo wg PN-EN ISO 3098 – najczęściej <b>typ B</b> (grubość linii pisma d = h/10), proste lub pochyłe pod kątem <b>75°</b>. Wysokości nominalne h: <b class="a">2,5 · 3,5 · 5 · 7 · 10 · 14 · 20 mm</b>. Wymiary piszemy zwykle h = 3,5 mm, tytuły 5–7 mm.</p>
+ <div class="tip"><b>Wskazówka z warsztatu:</b> nawet szkic ołówkiem stolarskim zyskuje na czytelności, gdy krawędzie rysujesz mocniej, a wymiary i osie – lekko.</div>`,
+ tryT:'Dobierz właściwą linię',tryKind:'choice',
+ tryTasks:[{q:'Widoczna krawędź blatu stołu',a:'k'},{q:'Oś symetrii toczonej nogi krzesła',a:'o'},{q:'Otwór na kołek ukryty wewnątrz deski (niewidoczny z przodu)',a:'h'},{q:'Linia wymiarowa z liczbą 450',a:'c'},{q:'Skrajne położenie otwartych drzwiczek szafki',a:'o2'}].map(t=>({q:t.q,opts:['k','c','h','o','o2'].map(k=>`${lineSample(k,90)}<span style="font-size:13px">${LINE_TYPES[k].n}</span>`),a:['k','c','h','o','o2'].indexOf(t.a),ex:`Prawidłowo: <b>${LINE_TYPES[t.a].n}</b> – ${LINE_TYPES[t.a].u}.`})),
+ quiz:[
+  {q:'Jaką linią rysuje się widoczne krawędzie przedmiotu?',o:['Ciągłą cienką','Ciągłą grubą','Kreskową cienką','Punktową cienką'],a:1,e:'Widoczne krawędzie i zarysy – zawsze linia ciągła gruba.'},
+  {q:'Do czego służy linia punktowa cienka (kreska-kropka)?',o:['Do krawędzi niewidocznych','Do linii wymiarowych','Do osi symetrii i osi otworów','Do urwania przedmiotu'],a:2,e:'Linią punktową cienką rysujemy osie symetrii, osie otworów i okręgi podziałowe.'},
+  {q:'Krawędzie niewidoczne (zakryte) rysujemy linią…',o:['kreskową','dwupunktową','falistą','ciągłą grubą'],a:0,e:'Linia kreskowa oznacza krawędzie, których nie widać z danego kierunku.'},
+  {q:'Jaki jest stosunek grubości linii grubej do cienkiej?',o:['1 : 1','2 : 1','3 : 1','4 : 1'],a:1,e:'Linia gruba jest dwa razy grubsza od cienkiej, np. 0,5 i 0,25 mm.'},
+  {q:'Linia dwupunktowa cienka oznacza m.in.…',o:['oś otworu','skrajne położenie części ruchomej','krawędź widoczną','kreskowanie przekroju'],a:1,e:'Dwupunktowa: skrajne położenia części ruchomych, zarysy części sąsiednich, linie gięcia.'},
+  {q:'Pismo typu B o wysokości h = 5 mm ma grubość linii d równą…',o:['0,25 mm','0,35 mm','0,5 mm','1 mm'],a:2,e:'W piśmie typu B d = h/10, więc 5 mm / 10 = 0,5 mm.'}]},
+{id:2,nl:'Papierformaten, stempel en schaal',t:'Formaty, tabliczka i skale',d:'A4…A0, ramka, tabliczka, 1:2, 1:10…',
+ body:()=>`<p>Rysunki wykonuje się na arkuszach o znormalizowanych wymiarach (PN-EN ISO 5457). Podstawą jest <b class="a">A0 = 1 m²</b>, o bokach w proporcji 1 : √2.</p>
+ <h3><span class="no">01</span>Formaty arkuszy<span class="nl">Papierformaten</span></h3>${figFormats()}
+ <table class="tb"><tr><th>Format</th><th>Wymiary [mm]</th></tr><tr><td>A0</td><td>841 × 1189</td></tr><tr><td>A1</td><td>594 × 841</td></tr><tr><td>A2</td><td>420 × 594</td></tr><tr><td>A3</td><td>297 × 420</td></tr><tr><td>A4</td><td>210 × 297</td></tr></table>
+ <h3><span class="no">02</span>Ramka i tabliczka<span class="nl">Kader en stempel</span></h3>${figSheet()}${figTitleBlock()}
+ <p>Tabliczka zawiera m.in.: nazwę i numer rysunku, <b>skalę</b>, materiał, autora, datę, format i symbol metody rzutowania. W Holandii nazywa się ją <i>stempel</i> lub <i>titelblok</i>.</p>
+ <h3><span class="no">03</span>Skale (PN-EN ISO 5455)<span class="nl">Schaal</span></h3>${figScales()}
+ <table class="tb"><tr><th>Rodzaj</th><th>Skale zalecane</th></tr><tr><td>naturalna</td><td>1 : 1</td></tr><tr><td>zmniejszające</td><td>1:2 · 1:5 · 1:10 · 1:20 · 1:50 · 1:100 · 1:200 · 1:500 · 1:1000</td></tr><tr><td>zwiększające</td><td>2:1 · 5:1 · 10:1 · 20:1 · 50:1</td></tr></table>
+ <div class="tip"><b>Najważniejsza zasada:</b> na rysunku zawsze wpisujemy <b class="a">wymiary rzeczywiste</b> przedmiotu, niezależnie od skali. Skala zmienia tylko wielkość rysunku.</div>
+ <p>Przeliczanie: <b>długość na rysunku = długość rzeczywista × skala</b>. Np. blat 1200 mm w skali 1 : 10 rysujemy jako 120 mm.</p>`,
+ tryT:'Kalkulator skali',tryKind:'scale',
+ quiz:[
+  {q:'Jakie wymiary ma arkusz A4?',o:['148 × 210 mm','210 × 297 mm','297 × 420 mm','200 × 300 mm'],a:1,e:'A4 = 210 × 297 mm – to połowa arkusza A3.'},
+  {q:'Arkusz A3 to…',o:['połowa A4','dwa arkusze A4','cztery arkusze A4','A4 powiększony o 10 cm'],a:1,e:'Każdy większy format to dwa razy większa powierzchnia: A3 = 2 × A4.'},
+  {q:'Przedmiot o długości 500 mm w skali 1 : 5 ma na rysunku…',o:['2500 mm','100 mm','50 mm','10 mm'],a:1,e:'500 mm × 1/5 = 100 mm.'},
+  {q:'Skala 2 : 1 oznacza, że rysunek jest…',o:['dwa razy mniejszy od przedmiotu','taki sam jak przedmiot','dwa razy większy od przedmiotu','narysowany na dwóch arkuszach'],a:2,e:'Pierwsza liczba dotyczy rysunku: 2 mm na rysunku = 1 mm w rzeczywistości (powiększenie).'},
+  {q:'Gdzie umieszcza się tabliczkę rysunkową?',o:['W lewym górnym rogu','Na środku u dołu','W prawym dolnym rogu ramki','Na odwrocie arkusza'],a:2,e:'Tabliczka zawsze w prawym dolnym rogu – tak, by była widoczna po złożeniu arkusza do A4.'},
+  {q:'Rysunek w skali 1 : 10. Jaką liczbę wpiszesz przy krawędzi deski o długości 800 mm?',o:['80','800','8000','0,8'],a:1,e:'Zawsze wpisujemy wymiar rzeczywisty – 800 (mm), mimo że linia na papierze ma 80 mm.'}]},
+{id:3,nl:'Aanzichten – loodrechte projectie',t:'Rzutowanie prostokątne',d:'Metoda E: rzut główny, z góry, z boku',
+ body:()=>`<p>Rzut prostokątny to „zdjęcie” przedmiotu zrobione z jednego kierunku, prostopadle – bez perspektywy. Zwykle wystarczą <b class="a">3 rzuty</b>: z przodu (główny), z góry i z lewej strony.</p>
+ <h3><span class="no">01</span>Kierunki patrzenia<span class="nl">Kijkrichting / aanzicht</span></h3>${fig(isoSVG(LPART,{s:2.1,arrows:true}),'A – rzut główny (vooraanzicht), B – z góry (bovenaanzicht), C – z lewej (linkerzijaanzicht)')}
+ <h3><span class="no">02</span>Układ rzutów w metodzie E<span class="nl">Europese projectiemethode</span></h3>${fig(layoutE(LPART,{s:1.6,links:true}),'Metoda europejska E (rzutowanie w I kącie, PN-EN ISO 5456-2)')}
+ <ul class="clean"><li>rzut <b>z góry (B)</b> umieszczamy <b class="a">pod</b> rzutem głównym,</li><li>rzut <b>z lewej (C)</b> umieszczamy <b class="a">po prawej</b> stronie rzutu głównego,</li><li>rzuty leżą w jednej linii: <b>szerokość</b> wspólna dla A i B, <b>wysokość</b> wspólna dla A i C, <b>głębokość</b> wspólna dla B i C.</li></ul>
+ <p>Zwróć uwagę na rzut C: stopień jest z tyłu (od strony prawej bryły), więc z lewej go nie widać – jego krawędź rysujemy <b>linią kreskową</b>. W rzucie C przód przedmiotu jest po prawej stronie.</p>
+ <h3><span class="no">03</span>Zasady</h3>
+ <ul class="clean"><li>Rzut główny wybieramy tak, by pokazywał <b>najwięcej informacji</b> o kształcie, najlepiej w położeniu pracy lub montażu.</li><li>Rysujemy tylko tyle rzutów, ile potrzeba, by kształt był jednoznaczny.</li><li>Metodę oznacza symbol w tabliczce:</li></ul>
+ ${fig(svg('-15 -12 120 66',symE(0,0,1)),'Symbol metody E – wąski koniec stożka skierowany od okręgów')}
+ <div class="tip">W Holandii i całej Europie stosuje się metodę <b>E</b>. W USA – metodę <b>A</b> (III kąt), gdzie rzut z góry jest <i>nad</i> rzutem głównym. Zawsze sprawdzaj symbol!</div>`,
+ tryT:'Obracaj i oglądaj rzuty',tryKind:'views3',
+ quiz:[
+  {q:'W metodzie E rzut z góry umieszcza się…',o:['nad rzutem głównym','pod rzutem głównym','na lewo od rzutu głównego','dowolnie'],a:1,e:'W metodzie europejskiej E widok z góry leży pod rzutem głównym.'},
+  {q:'Gdzie w metodzie E leży rzut z lewej strony?',o:['Po lewej stronie rzutu głównego','Po prawej stronie rzutu głównego','Pod rzutem z góry','Nad rzutem głównym'],a:1,e:'Widok z lewej umieszczamy po prawej stronie – „odwrotnie”, bo przedmiot jest między obserwatorem a rzutnią.'},
+  {q:'Jak wybrać rzut główny?',o:['Zawsze od najmniejszej ściany','Tak, by pokazywał najwięcej informacji o kształcie','Zawsze od spodu','Losowo'],a:1,e:'Rzut główny ma być najbardziej informacyjny, najlepiej w położeniu pracy przedmiotu.'},
+  {q:'Który wymiar jest wspólny dla rzutu głównego i rzutu z góry?',o:['Wysokość','Głębokość','Szerokość','Żaden'],a:2,e:'Rzut z góry leży pod głównym – oba pokazują tę samą szerokość.'},
+  {q:'Metoda E to inaczej…',o:['rzutowanie w I kącie (europejskie)','rzutowanie w III kącie (amerykańskie)','perspektywa','aksonometria'],a:0,e:'E = European = I kąt. A = American = III kąt.'},
+  {q:'Krawędź, której nie widać z danego kierunku, rysujemy w rzucie…',o:['linią kreskową','w ogóle jej nie rysujemy – nigdy','linią grubą','linią punktową'],a:0,e:'Krawędzie zakryte – linia kreskowa (można ją pominąć, jeśli nic nie wnosi).'}]},
+{id:4,nl:'Maatvoering',t:'Wymiarowanie',d:'Linie wymiarowe, groty, ⌀, R, mm',
+ body:()=>`<p>Wymiary mówią wykonawcy, <b>jak duży</b> ma być przedmiot. Zasady opisuje PN-EN ISO 129-1. Na rysunkach maszynowych i stolarskich wymiary liniowe podajemy w <b class="a">milimetrach, bez jednostki</b>.</p>
+ <h3><span class="no">01</span>Elementy wymiaru<span class="nl">Maatlijn, hulplijn, pijl</span></h3>${figPlate()}
+ <h3><span class="no">02</span>Znaki przed liczbą</h3>
+ <table class="tb"><tr><th>Znak</th><th>Znaczenie</th><th>Przykład</th></tr><tr><td>⌀</td><td>średnica</td><td>⌀20</td></tr><tr><td>R</td><td>promień</td><td>R10</td></tr><tr><td>□</td><td>kwadrat</td><td>□40</td></tr><tr><td>S⌀ / SR</td><td>średnica / promień kuli</td><td>SR12</td></tr><tr><td>×</td><td>faza</td><td>2 × 45°</td></tr></table>
+ <h3><span class="no">03</span>Zasady</h3>
+ <ul class="clean"><li>Każdy wymiar podajemy <b>tylko raz</b> – w rzucie, gdzie jest najczytelniejszy.</li><li>Krawędzie, osie i linie zarysu <b>nie mogą</b> być liniami wymiarowymi.</li><li>Linie wymiarowe nie powinny się przecinać – mniejsze wymiary bliżej przedmiotu, większe dalej.</li><li>Liczby piszemy nad linią, czytelne <b>od dołu</b> lub <b>od prawej</b> strony arkusza.</li><li>Unikamy wymiarowania do krawędzi niewidocznych (kreskowych).</li></ul>
+ <h3><span class="no">04</span>Wymiarowanie budowlane<span class="nl">Maatvoering bouwtekening</span></h3>${figBuildDims()}
+ <p>Na rysunkach budowlanych zamiast grotów stosuje się <b class="a">ukośne kreski</b> (45°), a wymiary układa w <b>łańcuchy</b>. W Polsce rysunki budowlane często wymiaruje się w cm, w Holandii – w <b>mm</b> (<i>maatvoering</i>).</p>`,
+ tryT:'Jak to zapisać?',tryKind:'choice',
+ tryTasks:[
+  {q:'Otwór o średnicy 12 mm',opts:['⌀12','R12','12⌀','⌀12 mm'],a:0,ex:'Znak ⌀ stoi przed liczbą, bez jednostki: <b>⌀12</b>.'},
+  {q:'Zaokrąglenie narożnika promieniem 5 mm',opts:['⌀5','R5','5R','r = 5 mm'],a:1,ex:'Promień: <b>R5</b>.'},
+  {q:'Długość blatu 1,2 m na rysunku stolarskim',opts:['1,2 m','120 cm','1200','1.2'],a:2,ex:'W mm, bez jednostki: <b>1200</b>.'},
+  {q:'Pręt o przekroju kwadratowym 20 × 20 mm',opts:['20x20mm','□20','K20','⌀20'],a:1,ex:'Kwadrat oznacza się znakiem <b>□20</b>.'},
+  {q:'Faza 3 mm pod kątem 45° na krawędzi',opts:['3 × 45°','45 × 3','F3','R3'],a:0,ex:'Fazę zapisujemy jako <b>3 × 45°</b>.'}],
+ quiz:[
+  {q:'W jakich jednostkach podaje się wymiary na rysunku stolarskim?',o:['W cm, z jednostką','W mm, bez jednostki','W m','W calach'],a:1,e:'Domyślną jednostką są milimetry i nie wpisujemy „mm”.'},
+  {q:'Co oznacza zapis ⌀30?',o:['Promień 30 mm','Średnicę 30 mm','Kwadrat 30 mm','Kąt 30°'],a:1,e:'⌀ – średnica.'},
+  {q:'Co oznacza zapis R25?',o:['Średnicę 25 mm','Promień 25 mm','Rowek 25 mm','Rozstaw 25 mm'],a:1,e:'R (radius) – promień.'},
+  {q:'Czy oś symetrii może być linią wymiarową?',o:['Tak, zawsze','Tak, w skali 1:1','Nie','Tylko w rysunkach budowlanych'],a:2,e:'Osie, krawędzie i zarysy nigdy nie są liniami wymiarowymi (oś można przedłużyć jako linię pomocniczą).'},
+  {q:'Liczby wymiarowe przy pionowych liniach wymiarowych piszemy tak, by były czytelne…',o:['do góry nogami','od prawej strony arkusza','od lewej strony arkusza','zawsze poziomo, w poprzek linii'],a:1,e:'Liczby czytamy od dołu lub od prawej strony rysunku.'},
+  {q:'O ile linie pomocnicze wystają poza linię wymiarową?',o:['ok. 2 mm','ok. 10 mm','wcale','ok. 5 cm'],a:0,e:'Linie pomocnicze wystają ok. 2 mm (1–3 mm) poza linię wymiarową.'}]},
+{id:5,nl:'Doorsneden en arcering',t:'Przekroje i kreskowanie',d:'Płaszczyzna A–A, kreskowanie 45°, materiały',
+ body:()=>`<p>Gdy przedmiot ma ukryte wnętrze (otwory, wpusty, kanały), rysowanie wielu linii kreskowych byłoby nieczytelne. Wtedy <b>„przecinamy”</b> go myślowo płaszczyzną i pokazujemy, co widać po przecięciu – to jest <b class="a">przekrój</b> (PN-EN ISO 128-40/50).</p>
+ <h3><span class="no">01</span>Jak powstaje przekrój<span class="nl">Doorsnede</span></h3>${figSection()}
+ <h3><span class="no">02</span>Kreskowanie<span class="nl">Arcering</span></h3>
+ <ul class="clean"><li>Linie <b>cienkie ciągłe</b>, zwykle pod kątem <b class="a">45°</b> do osi lub głównego zarysu.</li><li>Odstęp linii dobrany do wielkości pola (dla małych pól mniejszy).</li><li>Jedna część – w całym rysunku ten sam kierunek i odstęp.</li><li><b>Sąsiednie części</b> kreskujemy w przeciwnych kierunkach albo z innym odstępem.</li><li>W przekroju podłużnym <b>nie kreskuje się</b>: śrub, nitów, kołków, wałków pełnych, żeber, klinów.</li><li>Bardzo cienkie przekroje (blachy, uszczelki) można zaczernić.</li></ul>
+ <h3><span class="no">03</span>Rodzaje przekrojów</h3>
+ <ul class="clean"><li><b>Przekrój pełny</b> – płaszczyzna przez cały przedmiot.</li><li><b>Półprzekrój</b> – dla brył symetrycznych: pół widoku + pół przekroju, granicą jest oś.</li><li><b>Przekrój cząstkowy</b> – mały fragment, ograniczony linią falistą.</li><li><b>Kład</b> – przekrój „obrócony” i narysowany na widoku lub obok (np. profil listwy).</li></ul>
+ <h3><span class="no">04</span>Oznaczenia materiałów<span class="nl">Arceringen materialen</span></h3>${figMaterials()}
+ <p>W budownictwie oznaczenia materiałów opisuje PN-B-01030 (w Holandii <i>arceringen</i> wg NEN 47). Zawsze sprawdź legendę na rysunku.</p>`,
+ tryT:'Rozpoznaj materiał',tryKind:'choice',
+ tryTasks:['beton','drewno','izol','mur','drewnoW'].map(m=>{const pool=shuffle(['metal','drewno','drewnoW','beton','mur','izol'].filter(x=>x!==m)).slice(0,3).concat(m);return {q:`Który symbol oznacza: <b>${SW_NAMES[m]}</b>?`,opts:pool.map(swatch),svgOpts:true,a:3,ex:`To ${SW_NAMES[m]}.`}}),
+ quiz:[
+  {q:'Jak kreskuje się przekrój?',o:['Grubymi liniami poziomymi','Cienkimi liniami, zwykle pod kątem 45°','Linią kreskową','Linią punktową'],a:1,e:'Kreskowanie: cienkie linie ciągłe, zwykle 45°.'},
+  {q:'Dwie stykające się części w przekroju kreskujemy…',o:['tak samo','w przeciwnych kierunkach lub z innym odstępem','tylko jedną z nich','na czarno'],a:1,e:'Zmiana kierunku lub odstępu pokazuje granicę między częściami.'},
+  {q:'Jak oznacza się płaszczyznę przekroju?',o:['Linią falistą','Linią punktową cienką z grubymi końcami, strzałkami i literami','Linią dwupunktową','Kolorem czerwonym'],a:1,e:'Np. A–A: punktowa cienka, pogrubione końce, strzałki kierunku patrzenia, litery.'},
+  {q:'Czego NIE kreskuje się w przekroju podłużnym?',o:['Korpusu','Pełnych wałków, śrub i kołków','Ścian z cegły','Desek'],a:1,e:'Elementów pełnych typu śruby, kołki, wałki, żebra nie przecina się wzdłuż.'},
+  {q:'Półprzekrój stosuje się dla przedmiotów…',o:['symetrycznych','bardzo długich','z drewna','bez otworów'],a:0,e:'Połowa widoku + połowa przekroju – sensowne tylko przy symetrii.'},
+  {q:'Przekrój cząstkowy ogranicza się linią…',o:['falistą cienką','grubą ciągłą','kreskową','dwupunktową'],a:0,e:'Granicę przekroju cząstkowego rysujemy cienką linią falistą (lub zygzakową).'}]},
+{id:6,nl:'Isometrie en axonometrie',t:'Aksonometria i izometria',d:'Rysunek „3D” na płaskiej kartce',
+ body:()=>`<p>Aksonometria pokazuje przedmiot w jednym, poglądowym rysunku – widać trzy ściany naraz. Przydaje się do szkiców, instrukcji montażu i katalogów (PN-EN ISO 5456-3).</p>
+ <h3><span class="no">01</span>Osie<span class="nl">Isometrie</span></h3>${figAxes()}
+ <ul class="clean"><li><b>Izometria</b> – osie co <b class="a">120°</b>, osie x i y nachylone <b class="a">30°</b> do poziomu. W praktyce wszystkie wymiary odkładamy <b>1 : 1</b> (izometria uproszczona).</li><li><b>Dimetria ukośna</b> – przód rysujemy w prawdziwym kształcie, głębokość pod kątem <b class="a">45°</b> ze skrótem <b>0,5</b>.</li></ul>
+ <h3><span class="no">02</span>Okręgi</h3>${figCubes()}
+ <p>W izometrii każdy okrąg staje się <b>elipsą</b>. W dimetrii ukośnej okręgi na ścianie przedniej pozostają okręgami – dlatego jest wygodna dla przedmiotów z otworami od frontu.</p>
+ <h3><span class="no">03</span>Jak narysować bryłę w izometrii</h3>
+ <ol class="clean"><li>Narysuj osie: pionową i dwie pod 30°.</li><li>Narysuj „pudełko” o wymiarach całkowitych (dł. × szer. × wys.).</li><li>Odmierzaj wymiary <b>tylko wzdłuż osi</b> (lub do nich równolegle).</li><li>Wycinaj z pudełka zbędne części, na końcu pogrub widoczne krawędzie.</li></ol>
+ <div class="tip">Krawędzie równoległe w rzeczywistości są równoległe także na rysunku izometrycznym – to dobry test poprawności szkicu.</div>`,
+ tryT:'Zbuduj bryłę z klocków',tryKind:'builder',
+ quiz:[
+  {q:'Jakie kąty tworzą osie w izometrii?',o:['90°','120°','45°','60°'],a:1,e:'Trzy osie co 120°.'},
+  {q:'Pod jakim kątem do poziomu biegną osie x i y w izometrii?',o:['15°','30°','45°','60°'],a:1,e:'30° w lewo i w prawo od poziomu.'},
+  {q:'Jaki skrót stosuje się na osi głębokości w dimetrii ukośnej?',o:['1','0,82','0,5','0,25'],a:2,e:'Głębokość rysujemy o połowę krótszą.'},
+  {q:'Jak wygląda okrąg w rzucie izometrycznym?',o:['Jak okrąg','Jak elipsa','Jak kwadrat','Jak romb'],a:1,e:'Okręgi na ścianach izometrii stają się elipsami.'},
+  {q:'W izometrii uproszczonej wymiary wzdłuż osi odkładamy…',o:['w skali 1 : 1','skrócone o połowę','skrócone do 0,82','dowolnie'],a:0,e:'Uproszczona izometria – wszystkie trzy osie 1 : 1 (rysunek jest ok. 22% większy od teoretycznego, ale proporcje są zachowane).'}]},
+];
+/* ===== helpers for new lessons ===== */
+const numL=(x,y,tx,ty,n)=>L(x,y,tx,ty,'c')+`<circle cx="${f(tx)}" cy="${f(ty)}" r="2" fill="#ff9a1f"/>`+num(x,y,n);
+const lvl=(x,y,t)=>`<path d="M${f(x-4)},${f(y-7)} H${f(x+4)} L${f(x)},${f(y)} Z" fill="none" stroke="#eaf4ff" stroke-width="1.2"/>`+L(x-7,y,x+7,y)+T(x+7,y-3,t,'t','style="font-size:9px"');
+const wave=(x,y1,y2)=>{let d=`M${x},${y1}`;for(let y=y1;y<y2;y+=20)d+=` q 5,5 0,10 q -5,5 0,10`;return `<path class="c" d="${d}"/>`};
+function woodFill(d,cx,cy,id,radii=[6,12,19,27,36,46,57,69,82]){return `<clipPath id="${id}"><path d="${d}"/></clipPath><g clip-path="url(#${id})">${radii.map(r=>`<circle cx="${cx}" cy="${cy}" r="${r}" class="c"/>`).join('')}</g><path class="k" d="${d}" style="stroke-width:1.8"/>`}
+
+/* --- building drawing figures --- */
+function figSectionV(){
+  const Z=mm=>215-mm/15;let s='';
+  s+=`<rect x="31.5" y="${f(Z(-500))}" width="40" height="20" fill="url(#pConc)" class="k"/>`;
+  s+=`<rect x="40" y="${f(Z(900))}" width="6.7" height="${f(Z(-500)-Z(900))}" fill="url(#pBrick)"/><rect x="40" y="${f(Z(3100))}" width="6.7" height="${f(Z(2300)-Z(3100))}" fill="url(#pBrick)"/>`;
+  s+=`<rect x="56.7" y="${f(Z(900))}" width="6.6" height="${f(Z(-500)-Z(900))}" fill="url(#p135)"/><rect x="56.7" y="${f(Z(2600))}" width="6.6" height="${f(Z(2300)-Z(2600))}" fill="url(#p135)"/>`;
+  s+=`<rect x="46.7" y="${f(Z(900))}" width="8" height="${f(Z(-300)-Z(900))}" fill="url(#pIns)"/><rect x="46.7" y="${f(Z(2950))}" width="8" height="${f(Z(2300)-Z(2950))}" fill="url(#pIns)"/>`;
+  s+=`<path class="k" style="stroke-width:1.6" d="M40,${f(Z(-500))} V${f(Z(900))} H46.7 V${f(Z(-500))} M40,${f(Z(2300))} V${f(Z(3100))} H46.7 V${f(Z(2300))} Z M56.7,${f(Z(-500))} V${f(Z(900))} H63.3 V${f(Z(-500))} M56.7,${f(Z(2300))} V${f(Z(2600))} M63.3,${f(Z(2300))} V${f(Z(2600))} M56.7,${f(Z(2300))} H63.3"/>`;
+  s+=`<rect x="46.7" y="${f(Z(2300))}" width="10" height="${f(Z(900)-Z(2300))}" class="k" style="stroke-width:1.6"/>`+L(50.7,Z(2300)+3,50.7,Z(900)-3)+L(52.7,Z(2300)+3,52.7,Z(900)-3)+`<rect x="40" y="${f(Z(2300))}" width="6.7" height="3" fill="#8fc7ff"/>`;
+  s+=`<rect x="63.3" y="${f(Z(0))}" width="236.7" height="${f(Z(-200)-Z(0))}" fill="url(#pConc)"/><rect x="56.7" y="${f(Z(2800))}" width="243.3" height="${f(Z(2600)-Z(2800))}" fill="url(#pConc)"/><rect x="56.7" y="${f(Z(2950))}" width="243.3" height="${f(Z(2800)-Z(2950))}" fill="url(#pIns)"/>`;
+  s+=`<path class="k" style="stroke-width:1.6" d="M300,${f(Z(0))} H63.3 M63.3,${f(Z(-200))} H300 M300,${f(Z(2600))} H63.3 M56.7,${f(Z(2800))} H300 M56.7,${f(Z(2950))} H300 M56.7,${f(Z(2950))} V${f(Z(2600))}"/>`;
+  s+=L(0,Z(-150),40,Z(-150),'k');for(let x=4;x<40;x+=7)s+=L(x,Z(-150)+1,x-5,Z(-150)+7);
+  s+=L(63.3,Z(-650),300,Z(-650));for(let x=70;x<300;x+=12)s+=L(x,Z(-650)+1,x-5,Z(-650)+7);
+  s+=wave(300,8,248);
+  s+=T(185,128,'pomieszczenie','tb','text-anchor="middle"')+T(185,141,'(ruimte)','tb','text-anchor="middle"')+T(185,Z(-420),'kruipruimte','tb','text-anchor="middle" style="font-size:9px"');
+  s+=dim(240,Z(0),240,Z(2600),0,'2600',{noExt:true,tick:true});
+  [[2800,'+2,80'],[2600,'+2,60'],[0,'±0,00'],[-150,'−0,15'],[-800,'−0,80']].forEach(([mm,t])=>{s+=`<line x1="300" y1="${f(Z(mm))}" x2="312" y2="${f(Z(mm))}" stroke="#6f9fd6" stroke-width=".7" stroke-dasharray="2 3"/>`+lvl(318,Z(mm),t)});
+  s+=numL(16,190,43,200,1)+numL(16,165,50,170,2)+numL(92,180,61,190,3)+numL(170,62,170,24,4)+numL(140,195,140,222,5)+numL(98,262,70,258,6)+numL(92,110,52,110,7)+num(335,120,8)+numL(16,240,22,225,9);
+  return fig(svg('0 0 352 280',s),'Przekrój pionowy (doorsnede) przez ścianę zewnętrzną – oryginał 1:20, rzędne w m')+
+  legend(['mur zewnętrzny z cegły (buitenblad, metselwerk)','izolacja termiczna w szczelinie (spouwisolatie) + pustka powietrzna (spouw)','mur wewnętrzny – nośny, np. silikaty (binnenblad, kalkzandsteen)','strop/dach żelbetowy z izolacją (dakvloer + isolatie)','strop parteru nad kanałem (begane grondvloer boven kruipruimte)','ława fundamentowa (fundering, beton)','okno w przekroju: rama (kozijn) z szybą zespoloną; nad otworem nadproże (latei)','rzędne – wysokości względem ±0,00 (NL: peil). W NL często w mm: P + 2600','linia terenu (maaiveld, mv) – gruba, z kreskowaniem gruntu'])}
+function figElevation(){
+  const Y=mm=>180-mm/30;let s='';
+  s+=`<rect x="30" y="96" width="280" height="89" class="k"/>`;
+  s+=`<path class="k" d="M14,96 L170,20 L326,96 M26,96 L170,30 L314,96 M14,96 H26 M314,96 H326"/>`;
+  s+=`<rect x="160" y="55" width="20" height="20" class="k" style="stroke-width:1.6"/>`+L(170,55,170,75);
+  s+=`<rect x="80" y="${f(Y(2300))}" width="31" height="${f(Y(0)-Y(2300))}" class="k"/><rect x="84" y="${f(Y(2300)+4)}" width="23" height="${f(Y(0)-Y(2300)-4)}" class="c"/><circle cx="103" cy="${f(Y(1050))}" r="1.6" fill="#eaf4ff"/>`;
+  const win=(x,w)=>`<rect x="${x}" y="${f(Y(2300))}" width="${w}" height="${f(Y(900)-Y(2300))}" class="k"/><rect x="${x+3}" y="${f(Y(2300)+3)}" width="${w-6}" height="${f(Y(900)-Y(2300)-6)}" class="c"/>`;
+  s+=win(150,60)+L(180,Y(2300),180,Y(900),'k')+win(240,40);
+  s+=L(4,185,336,185,'k')+`<line x1="4" y1="186.5" x2="336" y2="186.5" stroke="#eaf4ff" stroke-width="2.4"/>`;
+  [[4800,'+4,80',20],[2300,'+2,30',Y(2300)],[900,'+0,90',Y(900)],[0,'±0,00',180],[-150,'−0,15',185]].forEach(([mm,t,y],i)=>{s+=`<line x1="${mm===4800?170:310}" y1="${f(y)}" x2="334" y2="${f(y)}" stroke="#6f9fd6" stroke-width=".7" stroke-dasharray="2 3"/>`+lvl(340,y-(i===4?-6:0),t)});
+  s+=num(290,165,1)+num(60,125,2)+num(195,165,3)+num(170,44,4)+num(355,70,5)+num(20,200,6);
+  return fig(svg('0 10 375 205',s),'Elewacja szczytowa (zijgevel / aanzicht) – tylko widoczne krawędzie, bez kreskowania')+
+  legend(['zarys ściany zewnętrznej (gevel) – linia gruba','drzwi zewnętrzne (voordeur) z ościeżnicą (kozijn)','okna: rama (kozijn) i słupek (stijl) dzielący okno','dach i kalenica (nok); okienko w szczycie','rzędne charakterystycznych poziomów: nok, nadproża, parapety, ±0,00 (peil)','linia terenu (maaiveld) – najgrubsza'])}
+function figWalls(){
+  const sw=(x,inner,lab,nl)=>`<g transform="translate(${x} 10)">${inner}</g>`+T(x+35,52,lab,'t','text-anchor="middle" style="font-size:10px"')+T(x+35,64,nl,'tb','text-anchor="middle" style="font-size:9.5px;font-style:italic"');
+  let s='';
+  s+=sw(8,`<rect width="70" height="22" fill="url(#pBrick)"/><rect width="70" height="22" class="k" style="stroke-width:1.8"/>`,'mur z cegły','metselwerk');
+  s+=sw(92,`<rect width="70" height="22" fill="url(#pConc)"/><rect width="70" height="22" class="k" style="stroke-width:1.8"/>`,'beton / żelbet','(gewapend) beton');
+  s+=sw(176,`<rect y="3" width="70" height="16" fill="url(#pIns)"/>${L(0,0,70,0,'k')+L(0,22,70,22,'k')+L(0,3,70,3)+L(0,19,70,19)}`,'ścianka g-k','gipsplaat + stud');
+  s+=sw(260,`<rect width="70" height="5" fill="url(#pBrick)"/><rect y="5" width="70" height="8" fill="url(#pIns)"/><rect y="15" width="70" height="7" fill="url(#p135)"/>${L(0,0,70,0,'k')+L(0,5,70,5)+L(0,13,70,13)+L(0,15,70,15)+L(0,22,70,22,'k')}`,'ściana szczelinowa','spouwmuur');
+  return fig(svg('0 0 340 70',s),'Oznaczenia ścian na rzucie (fragmenty przekrojów ścian)')}
+
+/* --- carpentry figures --- */
+function jointSVG(k){let s='';
+  if(k==='czop'){s+=`<rect x="20" y="15" width="30" height="120" class="k"/>`+`<path class="c h" d="M50,55 H26 V95 H50"/>`+`<path class="k" d="M80,50 H150 V100 H80 V95 H56 V55 H80 Z"/>`+L(80,50,80,100,'k')+L(12,75,156,75,'c o')+L(100,120,62,120)+arrowHead(58,120,Math.PI,9,'arA')+T(35,147,'gniazdo','tb','text-anchor="middle"')+T(68,46,'czop','tb','text-anchor="middle"')}
+  if(k==='wpust'){s+=woodFill('M8,57 H72 V69 H62 V81 H72 V93 H8 Z',22,118,'jw1'+Math.random().toString(36).slice(2,6))+woodFill('M152,57 H90 V69 H80 V81 H90 V93 H152 Z',138,118,'jw2'+Math.random().toString(36).slice(2,6))+T(40,45,'wpust','tb','text-anchor="middle"')+T(121,45,'pióro','tb','text-anchor="middle"')+T(80,115,'przekrój','tb','text-anchor="middle" style="font-size:9px"')}
+  if(k==='jaskol'){s+=`<rect x="30" y="45" width="100" height="25" class="c o2"/><path class="k" d="M30,70 H44.2 L40,45 H60 L55.8,70 H74.2 L70,45 H90 L85.8,70 H104.2 L100,45 H120 L115.8,70 H130 V140 H30 Z"/>`+T(80,110,'ogony','tb','text-anchor="middle"')+T(138,60,'1:6','ta','style="font-size:10px"')+T(80,38,'zarys drugiej deski','tb','text-anchor="middle" style="font-size:9px"')}
+  if(k==='kolek'){s+=`<rect x="30" y="20" width="18" height="120" class="k"/><rect x="48" y="20" width="92" height="18" class="k"/>`+`<rect x="36" y="25" width="35" height="8" class="c h"/>`+L(31,29,77,29,'c o')+L(70,33,96,62)+T(98,72,'⌀8×35','t')+T(98,86,'kołek','tb')}
+  return svg('0 0 160 150',s)}
+const JOINTS={czop:['Czop i gniazdo','pen-en-gatverbinding'],wpust:['Pióro i wpust','messing en groef'],jaskol:['Jaskółczy ogon','zwaluwstaartverbinding'],kolek:['Na kołki','deuvelverbinding']};
+function figJoints(){return `<div class="grid2">${Object.keys(JOINTS).map(k=>fig(jointSVG(k),`<b>${JOINTS[k][0]}</b><br><i>${JOINTS[k][1]}</i>`)).join('')}</div>`}
+function figGrain(){let s=`<clipPath id="gclip"><rect x="20" y="12" width="300" height="60"/></clipPath><g clip-path="url(#gclip)">`;
+  for(let i=0;i<9;i++){const y=16+i*7;s+=`<path class="c" d="M20,${y} C80,${y-5} 120,${y+6} 170,${y} S260,${y-6} 320,${y+2}"/>`}
+  s+=`</g><rect x="20" y="12" width="300" height="60" class="k"/>`+`<line x1="112" y1="92" x2="228" y2="92" stroke="#ff9a1f" stroke-width="2"/>`+arrowHead(106,92,Math.PI,12,'arA')+arrowHead(234,92,0,12,'arA')+T(170,112,'kierunek włókien (vezelrichting)','ta','text-anchor="middle"');
+  return fig(svg('0 0 340 120',s),'Blat 1200 × 600 mm – strzałka pokazuje kierunek włókien (długość wzdłuż włókien)')}
+function isoBox(x,y,z,dx,dy,dz,s,acc){const P=(a,b,c)=>isoP(a,b,c,s),pts=[];const poly=(a,c)=>{a.forEach(p=>pts.push(p));return `<polygon class="${c}" stroke="#eaf4ff" stroke-width="1.6" stroke-linejoin="round" points="${a.map(p=>f(p[0])+','+f(p[1])).join(' ')}"/>`};
+  const g=poly([P(x,y,z),P(x+dx,y,z),P(x+dx,y,z+dz),P(x,y,z+dz)],'fF')+poly([P(x+dx,y,z),P(x+dx,y+dy,z),P(x+dx,y+dy,z+dz),P(x+dx,y,z+dz)],'fR')+poly([P(x,y,z+dz),P(x+dx,y,z+dz),P(x+dx,y+dy,z+dz),P(x,y+dy,z+dz)],'fT');return{g,pts}}
+function figExploded(){const s=.36,E=70,all=[];let g='';
+  const parts=[[-E,0,0,18,280,432],[18,262+E,352,324,18,80],[18,-E,352,324,18,80],[342+E,0,0,18,280,432],[0,0,432+110,360,280,18]];
+  parts.forEach(p=>{const b=isoBox(...p,s);g+=b.g;all.push(...b.pts)});
+  const ln=(a,b)=>{const p=isoP(...a,s),q=isoP(...b,s);return L(p[0],p[1],q[0],q[1],'c o')};
+  g+=ln([0,0,542],[0,0,432])+ln([360,0,542],[360,0,432])+ln([-52,0,432],[0,0,432])+ln([412,0,432],[360,0,432])+ln([18,-52,432],[18,0,432]);
+  const ball=(a,dx,dy,n)=>{const p=isoP(...a,s),q=[p[0]+dx,p[1]+dy];all.push([q[0]-12,q[1]-12],[q[0]+12,q[1]+12]);return L(p[0],p[1],q[0],q[1],'c')+`<circle cx="${f(p[0])}" cy="${f(p[1])}" r="2" fill="#ff9a1f"/><circle cx="${f(q[0])}" cy="${f(q[1])}" r="11" fill="#0a2342" stroke="#ff9a1f" stroke-width="1.6"/>`+T(q[0],q[1]+4.5,n,'ta','text-anchor="middle"')};
+  g+=ball([250,100,560],40,-30,'1')+ball([-52,180,260],-40,-10,'2')+ball([430,120,200],38,10,'2')+ball([200,-70,380],-20,48,'3')+ball([300,332+18,420],40,-10,'3');
+  const xs=all.map(p=>p[0]),ys=all.map(p=>p[1]),pad=8,mx=Math.min(...xs)-pad,my=Math.min(...ys)-pad;
+  return fig(svg(`${f(mx)} ${f(my)} ${f(Math.max(...xs)-mx+pad)} ${f(Math.max(...ys)-my+pad)}`,g),'Rysunek złożeniowy taboretu w widoku rozstrzelonym (explosietekening). Linie punktowe – kierunki montażu, numery w kółkach – pozycje z listy elementów')}
+const CUT=[['1','Siedzisko','zitting',1,360,280,18,'dąb klejony (eiken)','wzdłuż 360'],['2','Bok','zijkant',2,432,280,18,'dąb klejony (eiken)','wzdłuż 432 (pionowo)'],['3','Oskrzynia (listwa)','regel',2,324,80,18,'dąb (eiken)','wzdłuż 324'],['4','Kołek ⌀8','deuvel',14,35,'⌀8','–','buk (beuken)','–']];
+function cutTable(){return `<div style="overflow-x:auto"><table class="tb" style="font-size:12.5px"><tr><th>Poz.</th><th>Element</th><th>Szt.</th><th>Dł.</th><th>Szer.</th><th>Gr.</th><th>Materiał</th><th>Włókna</th></tr>${CUT.map(r=>`<tr><td><b class="a">${r[0]}</b></td><td>${r[1]}<br><i class="small">${r[2]}</i></td><td>${r[3]}</td><td>${r[4]}</td><td>${r[5]}</td><td>${r[6]}</td><td>${r[7]}</td><td>${r[8]}</td></tr>`).join('')}</table></div><p class="small">Lista elementów / lista cięć (NL: <i>zaaglijst, materiaalstaat</i>). Wymiary netto w mm; długość zawsze wzdłuż włókien.</p>`}
+
+/* ===== Dutch glossary ===== */
+const GLOSS=[
+ ['Rodzaje rysunków','bouwtekening','rysunek budowlany'],['Rodzaje rysunków','plattegrond','rzut kondygnacji (rzut poziomy)'],['Rodzaje rysunków','doorsnede','przekrój'],['Rodzaje rysunków','gevel','elewacja; ściana zewnętrzna (fasada)'],['Rodzaje rysunków','aanzicht','widok (np. vooraanzicht – widok z przodu)'],['Rodzaje rysunków','situatietekening','plan sytuacyjny'],['Rodzaje rysunków','bestektekening','rysunek do opisu technicznego (bestek) – etap przetargowy'],['Rodzaje rysunków','werktekening','rysunek wykonawczy / warsztatowy'],['Rodzaje rysunków','detailtekening','rysunek detalu'],['Rodzaje rysunków','explosietekening','rysunek rozstrzelony'],['Rodzaje rysunków','schaal','skala'],['Rodzaje rysunków','stempel','tabliczka rysunkowa'],
+ ['Wymiary i poziomy','maatvoering','wymiarowanie'],['Wymiary i poziomy','maatlijn','linia wymiarowa'],['Wymiary i poziomy','peil (P)','poziom odniesienia ±0,00 (zwykle wierzch posadzki parteru)','peil'],['Wymiary i poziomy','NAP','Normaal Amsterdams Peil – państwowy poziom odniesienia wysokości','N A P'],['Wymiary i poziomy','maaiveld (mv)','poziom terenu','maaiveld'],['Wymiary i poziomy','b.k.','bovenkant – górna krawędź, wierzch','bovenkant'],['Wymiary i poziomy','o.k.','onderkant – dolna krawędź, spód','onderkant'],['Wymiary i poziomy','h.o.h.','hart-op-hart – rozstaw osiowy','hart op hart'],['Wymiary i poziomy','stramien','siatka osi konstrukcyjnych'],['Wymiary i poziomy','i.h.w.','in het werk – na budowie (wykonać / ustalić na miejscu)','in het werk'],['Wymiary i poziomy','t.p.v.','ter plaatse van – w miejscu, przy','ter plaatse van'],
+ ['Budynek','fundering','fundament'],['Budynek','kruipruimte','przestrzeń pod podłogą parteru (kanał)'],['Budynek','vloer','podłoga; strop (konstrukcja podłogi)'],['Budynek','muur','ściana, mur'],['Budynek','spouw','szczelina (pustka) w ścianie warstwowej'],['Budynek','spouwmuur','ściana szczelinowa (dwuwarstwowa)'],['Budynek','binnenblad','warstwa wewnętrzna (nośna) ściany szczelinowej'],['Budynek','buitenblad','warstwa zewnętrzna (elewacyjna) ściany szczelinowej'],['Budynek','latei','nadproże'],['Budynek','kozijn','ościeżnica; rama okna lub drzwi'],['Budynek','dorpel','próg; dolny element ościeżnicy'],['Budynek','raam','okno'],['Budynek','deur','drzwi'],['Budynek','dak','dach'],['Budynek','nok','kalenica'],['Budynek','dakgoot','rynna'],['Budynek','hemelwaterafvoer (hwa)','rura spustowa (odprowadzenie deszczówki)','hemelwaterafvoer'],['Budynek','trap','schody'],['Budynek','bordes','spocznik'],['Budynek','optrede','wysokość stopnia'],['Budynek','aantrede','głębokość stopnia (w rzucie)'],['Budynek','leuning','poręcz'],
+ ['Stolarka i drewno','balk','belka'],['Stolarka i drewno','regel','rygiel – poziomy element ramy lub szkieletu; łata'],['Stolarka i drewno','stijl','pionowy element ramy (ramiak, słupek)'],['Stolarka i drewno','multiplex','sklejka'],['Stolarka i drewno','spaanplaat','płyta wiórowa'],['Stolarka i drewno','vuren','świerk (vurenhout)'],['Stolarka i drewno','grenen','sosna'],['Stolarka i drewno','eiken','dąb'],['Stolarka i drewno','beuken','buk'],['Stolarka i drewno','pen-en-gatverbinding','połączenie na czop i gniazdo'],['Stolarka i drewno','messing en groef','pióro i wpust'],['Stolarka i drewno','zwaluwstaart','jaskółczy ogon'],['Stolarka i drewno','deuvel','kołek (łączący)'],['Stolarka i drewno','sponning','wręg (felc)'],['Stolarka i drewno','verstek','połączenie na ucios (45°)'],['Stolarka i drewno','vezelrichting','kierunek włókien'],['Stolarka i drewno','zaaglijst','lista cięć (lista elementów)'],
+ ['Materiały','metselwerk','mur (konstrukcja murowana)'],['Materiały','kalkzandsteen','silikat (bloczek wapienno-piaskowy)'],['Materiały','beton','beton'],['Materiały','gewapend beton','żelbet'],['Materiały','wapening','zbrojenie'],['Materiały','isolatie','izolacja (termiczna)'],['Materiały','gipsplaat','płyta gipsowo-kartonowa']
+].map(r=>({cat:r[0],nl:r[1],pl:r[2],say:r[3]||r[1]}));
+let nlVoice=null;
+function findNlVoice(){try{const v=speechSynthesis.getVoices();nlVoice=v.find(x=>/^nl[-_]NL/i.test(x.lang))||v.find(x=>/^nl/i.test(x.lang))||null}catch(e){nlVoice=null}return nlVoice}
+if('speechSynthesis' in window){findNlVoice();try{speechSynthesis.onvoiceschanged=findNlVoice}catch(e){}}
+function speakNL(t){if(!('speechSynthesis' in window))return false;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='nl-NL';if(nlVoice||findNlVoice())u.voice=nlVoice;u.rate=.9;speechSynthesis.speak(u);return true}catch(e){return false}}
+const spkBtn=t=>'speechSynthesis' in window?`<button class="spk" data-say="${t}" aria-label="Wymów po holendersku">🔊</button>`:'';
+document.addEventListener('click',e=>{const b=e.target.closest('.spk');if(!b)return;e.stopPropagation();speakNL(b.dataset.say);b.classList.add('pulse');setTimeout(()=>b.classList.remove('pulse'),300)});
+function glossTable(){const cats=[...new Set(GLOSS.map(g=>g.cat))];
+  return cats.map(c=>`<h3><span class="no">//</span>${c}</h3><table class="tb gl"><tr><th>NL</th><th>PL</th></tr>${GLOSS.filter(g=>g.cat===c).map(g=>`<tr><td><b>${g.nl}</b> ${spkBtn(g.say)}</td><td>${g.pl}</td></tr>`).join('')}</table>`).join('')}
+
+/* ===== NEW LESSONS ===== */
+LESSONS.push(
+{id:7,nl:'Bouwkundige tekening',t:'Rysunek budowlany',d:'Rzut, przekrój, elewacja, rzędne',
+ body:()=>`<p>Projekt budynku to komplet rysunków (NL: <i>bouwtekeningen</i>). Każdy pokazuje budynek „przecięty” lub oglądany z innej strony. Obowiązują zasady z poprzednich lekcji – linie, rzuty, przekroje – ale z własnymi symbolami i skalami.</p>
+ <h3><span class="no">01</span>Rodzaje rysunków budowlanych<span class="nl">Soorten tekeningen</span></h3>
+ <table class="tb"><tr><th>Rysunek</th><th>NL</th><th>Co pokazuje</th></tr><tr><td><b>Rzut kondygnacji</b></td><td>plattegrond</td><td>przekrój poziomy ok. 1 m nad posadzką – przecina ściany, okna i drzwi</td></tr><tr><td><b>Przekrój pionowy</b></td><td>doorsnede</td><td>wysokości, stropy, dach, fundamenty, warstwy przegród</td></tr><tr><td><b>Elewacja</b></td><td>gevel / aanzicht</td><td>widok ściany zewnętrznej – tylko to, co widać (bez kreskowania)</td></tr><tr><td><b>Plan sytuacyjny</b></td><td>situatietekening</td><td>budynek na działce, 1 : 500 / 1 : 1000</td></tr><tr><td><b>Detal</b></td><td>detail</td><td>połączenie elementów, 1 : 5 – 1 : 20</td></tr></table>
+ <h3><span class="no">02</span>Rzut kondygnacji<span class="nl">Plattegrond</span></h3>${figPlan()}
+ ${figWalls()}
+ <p>Na rzucie ściany <b>przecięte</b> rysujemy grubą linią i wypełniamy oznaczeniem materiału. Elementy <b>poniżej</b> płaszczyzny cięcia (schody, parapety) – linią cienką, a <b>powyżej</b> (np. belki, okna dachowe) – kreskową.</p>
+ <h3><span class="no">03</span>Przekrój pionowy<span class="nl">Doorsnede</span></h3>${figSectionV()}
+ <h3><span class="no">04</span>Elewacja<span class="nl">Gevel / aanzicht</span></h3>${figElevation()}
+ <h3><span class="no">05</span>Wymiarowanie łańcuchowe<span class="nl">Maatvoering</span></h3>${figBuildDims()}
+ <ul class="clean"><li>Wymiary układamy w <b>łańcuchy</b> równoległe do ścian, zakończone ukośnymi kreskami.</li><li>Najbliżej ściany – łańcuch <b>otworów</b> (okna, drzwi), dalej – <b>osie / ściany</b>, najdalej – wymiar <b>całkowity</b>.</li><li>Suma łańcucha musi być równa wymiarowi całkowitemu – to szybki test rysunku.</li><li>Wymiary otworów: szerokość nad linią, a często wysokość pod linią (np. <b>90/210</b>).</li></ul>
+ <h3><span class="no">06</span>Rzędne<span class="nl">Hoogtes t.o.v. peil</span></h3>
+ <p><b>Rzędna</b> to wysokość punktu względem poziomu odniesienia <b class="a">±0,00</b> (NL: <i>peil</i>, zwykle wierzch gotowej posadzki parteru). Na przekrojach i elewacjach oznaczamy ją trójkątem z kreską, np. <b>+2,60</b>, <b>−0,15</b>. W Polsce rzędne podaje się zwykle w metrach, w Holandii – często w mm (np. <i>P + 2600</i>, <i>b.k. vloer +3000</i>). Poziom peil odnosi się do <b>NAP</b> (np. P = NAP + 0,45 m).</p>
+ <div class="tip"><b>Na budowie:</b> wysokość pomieszczenia w świetle = rzędna spodu stropu − rzędna posadzki. Grubość stropu = wierzch − spód.</div>`,
+ tryT:'Czytaj przekrój i elewację',tryKind:'choice',
+ tryTasks:[
+  {q:'Z przekroju: wierzch stropu +2,80, spód stropu +2,60. Jaka jest grubość stropu?',opts:['20 cm','2,60 m','28 cm','6 cm'],a:0,ex:'2,80 − 2,60 = 0,20 m = <b>20 cm</b>.'},
+  {q:'Posadzka ±0,00, spód stropu +2,60. Jaka jest wysokość pomieszczenia w świetle?',opts:['2,80 m','2,60 m','2,40 m','3,00 m'],a:1,ex:'2,60 − 0,00 = <b>2,60 m</b>.'},
+  {q:'Teren (maaiveld) ma rzędną −0,15. O ile posadzka parteru jest wyżej niż teren?',opts:['15 cm','1,5 cm','1,5 m','0 cm'],a:0,ex:'0,00 − (−0,15) = <b>0,15 m</b>.'},
+  {q:'Łańcuch wymiarowy: 1500 + 900 + 4100. Ile wynosi wymiar całkowity?',opts:['6400','6500','5500','7500'],a:1,ex:'1500 + 900 + 4100 = <b>6500</b> mm – zgadza się z wymiarem całkowitym na rzucie.'},
+  {q:'Na którym rysunku NIE kreskuje się ścian?',opts:['Na rzucie kondygnacji','Na przekroju pionowym','Na elewacji','Na detalu'],a:2,ex:'Elewacja to <b>widok</b> – nic nie jest przecięte, więc nie ma kreskowania.'}],
+ quiz:[
+  {q:'Na jakiej wysokości „przecina się” budynek, aby narysować rzut kondygnacji?',o:['Na poziomie posadzki','Ok. 1 m nad posadzką, przez okna i drzwi','Tuż pod stropem','Na poziomie fundamentów'],a:1,e:'Płaszczyzna cięcia przechodzi przez otwory okienne i drzwiowe, ok. 1 m (zwykle 1,0–1,5 m) nad posadzką.'},
+  {q:'Elewacja (gevel/aanzicht) to…',o:['przekrój przez ścianę','widok ściany zewnętrznej, bez kreskowania','rzut dachu','plan działki'],a:1,e:'Elewacja pokazuje tylko widoczne krawędzie fasady.'},
+  {q:'Rzędna +2,60 oznacza punkt…',o:['2,60 m nad poziomem ±0,00','2,60 m nad poziomem morza','2,60 m pod terenem','o wysokości 2,60 m od dachu'],a:0,e:'Rzędne odnosimy do poziomu ±0,00 (peil).'},
+  {q:'Który łańcuch wymiarowy leży najbliżej ściany na rzucie?',o:['Wymiar całkowity','Łańcuch otworów (okna, drzwi)','Osie konstrukcyjne','Nie ma reguły'],a:1,e:'Kolejność od ściany: otwory → osie/ściany → wymiar całkowity.'},
+  {q:'Co najlepiej pokazuje przekrój pionowy (doorsnede)?',o:['Układ pomieszczeń','Wysokości, stropy, dach i fundamenty','Kolor elewacji','Granice działki'],a:1,e:'Przekrój pionowy pokazuje budynek „w pionie” – wysokości i warstwy.'},
+  {q:'Co na rysunku oznacza kropka i strzałka na symbolu schodów?',o:['Kierunek spadku wody','Początek biegu i kierunek wchodzenia','Miejsce poręczy','Liczbę stopni'],a:1,e:'Kropka – pierwszy stopień, strzałka – kierunek „w górę”.'}]},
+{id:8,nl:'Houtverbindingen en meubeltekening',t:'Rysunek stolarski',d:'Połączenia, słoje, lista cięć, złożenie',
+ body:()=>`<p>Rysunek stolarski (NL: <i>werktekening</i> dla mebla lub stolarki) rysuje się w skalach <b>1 : 1 – 1 : 10</b>, z wymiarami w <b class="a">mm</b>. Składa się zwykle z rysunku złożeniowego, rysunków części, detali połączeń i listy elementów.</p>
+ <h3><span class="no">01</span>Połączenia stolarskie<span class="nl">Houtverbindingen</span></h3>${figJoints()}
+ <ul class="clean"><li><b>Czop i gniazdo</b> – grubość czopa ok. <b>1/3</b> grubości elementu; ukryte gniazdo rysujemy linią kreskową, a oś – punktową.</li><li><b>Pióro i wpust</b> – łączenie desek wzdłuż krawędzi (podłogi, boazerie, blaty). Pokazujemy je w przekroju, z oznaczeniem drewna.</li><li><b>Jaskółczy ogon</b> – połączenie narożne szuflad i skrzyń; nachylenie ogonów ok. <b>1:6</b> (drewno iglaste) lub <b>1:8</b> (liściaste).</li><li><b>Kołki</b> – zwykle ⌀6, ⌀8 lub ⌀10; średnica ok. 1/3–1/2 grubości płyty (np. ⌀8 dla 18 mm). Zapis: <b>⌀8×35</b>.</li></ul>
+ <h3><span class="no">02</span>Kierunek słojów<span class="nl">Vezelrichting</span></h3>${figGrain()}
+ <p>Kierunek włókien wpływa na wytrzymałość i wygląd (rysunek słojów), a przy płytach fornirowanych – na rozkrój. Zaznaczamy go <b>podwójną strzałką</b> na rysunku części i kolumną w liście elementów.</p>
+ <h3><span class="no">03</span>Rysunek złożeniowy i widok rozstrzelony<span class="nl">Samenstellings- en explosietekening</span></h3>${figExploded()}
+ <ul class="clean"><li>Każda część ma <b>numer pozycji</b> w kółku (z linią odniesienia), zgodny z listą elementów.</li><li>Widok rozstrzelony rozsuwa części wzdłuż kierunków montażu – widać kolejność składania.</li><li>Do każdej pozycji wykonuje się osobny rysunek wykonawczy z pełnym wymiarowaniem.</li></ul>
+ <h3><span class="no">04</span>Lista elementów<span class="nl">Zaaglijst / materiaalstaat</span></h3>${cutTable()}
+ <div class="tip"><b>Sprawdź wymiary:</b> wysokość taboretu = 432 (bok) + 18 (siedzisko) = <b>450 mm</b>; długość listwy = 360 − 2 × 18 = <b>324 mm</b>.</div>`,
+ tryT:'Rozpoznaj połączenie',tryKind:'choice',
+ tryTasks:[...['czop','wpust','jaskol','kolek'].map(k=>{const pool=['czop','wpust','jaskol','kolek'];return{q:`Który rysunek przedstawia: <b>${JOINTS[k][0]}</b> (<i>${JOINTS[k][1]}</i>)?`,opts:pool.map(j=>jointSVG(j).replace(/<text[^>]*>[^<]*<\/text>/g,'')),svgOpts:true,a:pool.indexOf(k),ex:`To ${JOINTS[k][0].toLowerCase()} – ${JOINTS[k][1]}.`}}),
+  {q:'Lista elementów: „Bok – 432 × 280 × 18, włókna: wzdłuż 432”. Jak wyciąć element z deski?',opts:['Długość 432 wzdłuż włókien','Długość 432 w poprzek włókien','Dowolnie','Po skosie 45°'],a:0,ex:'Pierwszy wymiar (długość) zawsze <b>wzdłuż włókien</b>.'}],
+ quiz:[
+  {q:'Jaka jest typowa grubość czopa w połączeniu czopowym?',o:['ok. 1/3 grubości elementu','cała grubość elementu','ok. 1/10 grubości','dwa razy grubość'],a:0,e:'Reguła 1/3: czop i dwie ścianki gniazda mają podobną grubość.'},
+  {q:'Do czego najczęściej używa się połączenia na pióro i wpust (messing en groef)?',o:['Do łączenia desek wzdłuż krawędzi – podłogi, boazerie','Do narożników szuflad','Do mocowania zawiasów','Do łączenia metalu'],a:0,e:'Pióro wchodzi we wpust sąsiedniej deski – powstaje równa, szczelna płaszczyzna.'},
+  {q:'Jakie nachylenie ogonów jaskółczych stosuje się zwykle w drewnie liściastym?',o:['1:2','1:8','1:20','45°'],a:1,e:'Ok. 1:8 w drewnie liściastym, ok. 1:6 w iglastym.'},
+  {q:'Co oznacza zapis „⌀8×35” przy kołku?',o:['średnica 8 mm, długość 35 mm','8 kołków po 35 mm','promień 8, długość 35','35 kołków ⌀8'],a:0,e:'Średnica × długość, w mm.'},
+  {q:'Czego NIE znajdziesz zwykle w liście elementów (zaaglijst)?',o:['Liczby sztuk','Wymiarów netto','Kierunku włókien','Ceny wkrętarki'],a:3,e:'Lista elementów: pozycja, nazwa, ilość, wymiary, materiał, kierunek włókien.'},
+  {q:'Co pokazuje widok rozstrzelony (explosietekening)?',o:['Części rozsunięte wzdłuż kierunków montażu','Tylko jeden element w przekroju','Rzut z góry mebla','Rysunek w skali 1:100'],a:0,e:'Widać wszystkie części i to, jak się składają, a numery pozycji odsyłają do listy elementów.'}]},
+{id:9,nl:'Nederlandse termen en afkortingen',t:'Holenderskie zwroty i skróty',d:'Słowniczek NL → PL, wymowa, fiszki',
+ body:()=>`<p>Na holenderskiej budowie i w warsztacie rysunki są opisane po niderlandzku. Poniżej najważniejsze terminy i skróty. Dotknij 🔊, aby usłyszeć wymowę (jeśli w telefonie jest głos holenderski).</p>
+ <div class="card" style="display:flex;gap:12px;align-items:center"><div style="font-size:34px">🗂️</div><div style="flex:1"><b>Fiszki NL ↔ PL</b><div class="small">Ucz się słówek, oznaczaj „znam / nie znam” – postęp zapisuje się w telefonie.</div></div><a class="btn acc" href="#/fiszki">Otwórz</a></div>
+ <div class="tip">Skróty zapisuje się zwykle małymi literami z kropkami: <b>b.k.</b>, <b>o.k.</b>, <b>h.o.h.</b>. Wysokości: <b>P</b> (peil) = ±0,00, a <b>NAP</b> = poziom odniesienia całej Holandii.</div>
+ ${glossTable()}`,
+ tryT:'Szybki test słówek',tryKind:'choice',
+ tryTasks:shuffle(GLOSS).slice(0,6).map(g=>{const others=shuffle(GLOSS.filter(x=>x!==g&&x.pl!==g.pl)).slice(0,3);return{q:`Co znaczy <b>${g.nl}</b>? ${spkBtn(g.say)}`,opts:[g.pl,...others.map(o=>o.pl)],a:0,ex:`<b>${g.nl}</b> = ${g.pl}.`}}),
+ quiz:[
+  {q:'Co oznacza „bordes”?',o:['Poręcz','Spocznik','Stopień','Próg'],a:1,e:'Bordes – spocznik schodów.'},
+  {q:'„Optrede” to…',o:['wysokość stopnia','głębokość stopnia','szerokość biegu','długość poręczy'],a:0,e:'Optrede – wysokość stopnia; aantrede – głębokość w rzucie.'},
+  {q:'Drewno „vuren” to…',o:['dąb','sosna','świerk','buk'],a:2,e:'Vuren(hout) – świerk. Sosna to grenen, dąb – eiken, buk – beuken.'},
+  {q:'„Latei” to…',o:['nadproże','listwa przypodłogowa','łata dachowa','próg'],a:0,e:'Latei – nadproże nad otworem okiennym lub drzwiowym.'},
+  {q:'Skrót „o.k.” oznacza…',o:['górną krawędź','dolną krawędź (onderkant)','oś konstrukcyjną','otwór'],a:1,e:'o.k. = onderkant – spód; b.k. = bovenkant – wierzch.'},
+  {q:'„Werktekening” to…',o:['rysunek wykonawczy','rysunek przetargowy','plan działki','faktura'],a:0,e:'Werktekening – rysunek wykonawczy/warsztatowy; bestektekening – do opisu technicznego (bestek) na etapie przetargu.'}]});
+/* ===== FLASHCARDS (Fiszki) ===== */
+function fiszki(){
+  head('<span>Fiszki</span> NL ↔ PL','#/lekcja/9');
+  let st=store.get('fc',{}),dir=store.get('fc_dir','nl'),only=store.get('fc_only',false),deck=[],i=0,flipped=false;
+  const known=()=>GLOSS.filter(g=>st[g.nl]&&st[g.nl].k).length;
+  const build=()=>{deck=shuffle(GLOSS.filter(g=>!only||!(st[g.nl]&&st[g.nl].k)));i=0;flipped=false};
+  const hasTTS='speechSynthesis' in window;
+  app().innerHTML=`<div class="seg" id="fdir"><button data-d="nl">NL → PL</button><button data-d="pl">PL → NL</button></div>
+  <div class="seg" id="fonly"><button data-o="0">Wszystkie</button><button data-o="1">Tylko „nie znam”</button><button id="fshuf">🔀 Tasuj</button></div>
+  <div class="qhead"><span id="fcnt"></span><span>Znam: <b class="acc" id="fkn"></b> / ${GLOSS.length}</span></div><div class="prog"><i id="fpr"></i></div>
+  <div id="fcard"></div>
+  <p class="small center" id="tts">${hasTTS?'':'Ta przeglądarka nie obsługuje syntezy mowy.'}</p>
+  <div class="row"><button class="btn" id="freset">Wyzeruj fiszki</button><a class="btn" href="#/lekcja/9">Słowniczek</a></div>`;
+  const seg=()=>{$$('#fdir button').forEach(b=>b.classList.toggle('on',b.dataset.d===dir));$$('#fonly button[data-o]').forEach(b=>b.classList.toggle('on',(b.dataset.o==='1')===only))};
+  const stats=()=>{$('#fkn').textContent=known();$('#fpr').style.width=(known()/GLOSS.length*100)+'%'};
+  const render=()=>{seg();stats();const el=$('#fcard');
+    if(!deck.length){el.innerHTML=`<div class="card center"><div style="font-size:44px">🏆</div><h2>Znasz wszystkie słówka!</h2><p class="small">Przełącz na „Wszystkie”, aby powtórzyć.</p></div>`;$('#fcnt').textContent='';return}
+    if(i>=deck.length){el.innerHTML=`<div class="card center"><h2>Koniec talii 👍</h2><p>Znasz ${known()} z ${GLOSS.length} słówek.</p><div class="row"><button class="btn acc" id="fagain">Jeszcze raz (tasuj)</button></div></div>`;$('#fcnt').textContent=`${deck.length} / ${deck.length}`;$('#fagain').onclick=()=>{build();render()};return}
+    const g=deck[i],front=dir==='nl'?g.nl:g.pl,back=dir==='nl'?g.pl:g.nl,s=st[g.nl];
+    $('#fcnt').textContent=`Karta ${i+1} / ${deck.length}`;
+    el.innerHTML=`<button class="fc ${flipped?'f':''}" id="fc" aria-label="Odwróć kartę"><div class="in"><div class="ba"><span class="small">${g.cat} · ${dir==='nl'?'NEDERLANDS':'POLSKI'}</span><div class="w">${front}</div><span class="small">dotknij, aby odwrócić</span></div><div class="fa"><span class="small">${dir==='nl'?'POLSKI':'NEDERLANDS'}</span><div class="w">${back}</div>${s?`<span class="small">${s.k?'✓ oznaczone jako znane':'✗ do powtórki'}</span>`:''}</div></div></button>
+    <div class="row">${hasTTS?`<button class="btn" id="fsay">🔊 Wymów (NL)</button>`:''}</div>
+    <div class="row"><button class="btn" id="fno" style="border-color:var(--bad)">✗ Nie znam</button><button class="btn acc" id="fyes">✓ Znam</button></div>`;
+    $('#fc').onclick=()=>{flipped=!flipped;$('#fc').classList.toggle('f',flipped);beep(700,.03)};
+    if(hasTTS)$('#fsay').onclick=()=>{speakNL(g.say);if(!nlVoice)$('#tts').textContent='Brak holenderskiego głosu w urządzeniu – używam domyślnego (zainstaluj głos „Nederlands” w ustawieniach syntezy mowy).'};
+    const mark=k=>{st[g.nl]={k:k?1:0,n:((st[g.nl]&&st[g.nl].n)||0)+1,t:Date.now()};store.set('fc',st);k?sGood():beep(300,.08,'triangle',.05);i++;flipped=false;render()};
+    $('#fyes').onclick=()=>mark(true);$('#fno').onclick=()=>mark(false)};
+  $$('#fdir button').forEach(b=>b.onclick=()=>{dir=b.dataset.d;store.set('fc_dir',dir);flipped=false;render()});
+  $$('#fonly button[data-o]').forEach(b=>b.onclick=()=>{only=b.dataset.o==='1';store.set('fc_only',only);build();render()});
+  $('#fshuf').onclick=()=>{build();render();beep(500,.05)};
+  $('#freset').onclick=()=>{if(confirm('Wyzerować oznaczenia „znam / nie znam”?')){st={};store.set('fc',st);build();render()}};
+  build();render()}
+/* ===== layout helpers ===== */
+const app=()=>$('#app');
+let backTo='#/';
+function head(title,back){$('#ttl').innerHTML=title;backTo=back;$('#back').style.visibility=back?'visible':'hidden'}
+function lessonProgress(){const n=LESSONS.filter(l=>P.done[l.id]).length;return{n,pct:Math.round(n/LESSONS.length*100)}}
+
+/* ===== HOME ===== */
+function home(){
+  head('Rysunek <span>techniczny</span>',null);const pr=lessonProgress();
+  const next=LESSONS.find(l=>!P.done[l.id]);
+  app().innerHTML=`<div class="hero"><div class="tx"><h2>Rysunek<br><span class="acc">techniczny</span></h2><div class="small">Od zera – dla budowlańców i stolarzy. Wg norm PN-EN ISO.</div></div>${isoSVG(LPART,{s:1.15,pad:4})}</div>
+  <div class="card"><div class="qhead"><span>Twój postęp</span><span><b class="acc">${pr.n}</b> / ${LESSONS.length} lekcji</span></div><div class="prog"><i style="width:${pr.pct}%"></i></div>
+  <div class="small">${next?`Następna: <b>${next.id}. ${next.t}</b>`:'Wszystkie lekcje zaliczone – świetna robota! 🎉'}</div>
+  ${next?`<div class="row"><a class="btn acc" href="#/lekcja/${next.id}">${pr.n?'Kontynuuj':'Zacznij naukę'} →</a></div>`:''}</div>
+  <h3><span class="no">//</span>Lekcje</h3>
+  ${LESSONS.map(l=>{const q=P.quiz[l.id];return `<a class="card lc" href="#/lekcja/${l.id}"><div class="n">${String(l.id).padStart(2,'0')}</div><div class="b"><strong>${l.t}</strong><span class="small">${l.d}${l.nl?` · <i style="color:#ffc46b">${l.nl}</i>`:''}</span></div><span class="st ${P.done[l.id]?'ok':''}">${P.done[l.id]?'✓ '+(q?q.best+'/'+q.n:''):q?q.best+'/'+q.n:P.seen[l.id]?'w toku':'nowa'}</span></a>`}).join('')}
+  <h3><span class="no">//</span>Ćwiczenia i gry</h3>
+  <div class="grid2">
+   <a class="tile" href="#/rzuty"><div class="ic">🧊</div><strong>Dopasuj rzuty</strong><span class="small">Wybierz właściwy rzut z góry${P.views.best?` · rekord ${P.views.best}`:''}</span></a>
+   <a class="tile" href="#/szkic"><div class="ic">✏️</div><strong>Szkicownik</strong><span class="small">Rysuj linie na siatce, palcem</span></a>
+   <a class="tile" href="#/gry/slowka"><div class="ic">⏱️</div><strong>Wyścig słówek</strong><span class="small">NL ↔ PL na czas${store.get('wr_best',0)?` · rekord ${store.get('wr_best',0)}`:''}</span></a>
+   <a class="tile" href="#/fiszki"><div class="ic">🗂️</div><strong>Fiszki NL ↔ PL</strong><span class="small">${GLOSS.length} słówek · znam ${GLOSS.filter(g=>(store.get('fc',{})[g.nl]||{}).k).length}</span></a>
+   <a class="tile" href="#/lekcja/9"><div class="ic">🇳🇱</div><strong>Słowniczek NL</strong><span class="small">Terminy i skróty z wymową</span></a>
+   <a class="tile" href="#/gry/memory"><div class="ic">🃏</div><strong>Memory symboli</strong><span class="small">Symbol ↔ nazwa PL/NL</span></a>
+  </div>
+  <div class="row"><button class="btn" id="reset">Wyzeruj postęp</button></div>
+  <p class="small center">Działa offline. Dodaj do ekranu głównego: menu przeglądarki → „Dodaj do ekranu głównego”.</p>`;
+  $('#reset').onclick=()=>{if(confirm('Na pewno usunąć cały postęp i wyniki?')){P={done:{},quiz:{},seen:{},views:{best:0},try:{}};saveP();['wr_best','mem_best','sketch','fc'].forEach(k=>store.set(k,null));home()}};
+}
+
+/* ===== LESSON ===== */
+function lesson(id){
+  const l=LESSONS.find(x=>x.id==id);if(!l)return home();P.seen[l.id]=1;saveP();
+  head(`<span>${String(l.id).padStart(2,'0')}</span> ${l.t}`,'#/');
+  const q=P.quiz[l.id],nx=LESSONS.find(x=>x.id===l.id+1);
+  app().innerHTML=`<h2>${l.t}</h2>${l.nl?`<span class="nlsub">NL: ${l.nl}</span>`:''}${l.body()}
+  <div class="card try" id="try"><h3>✍️ Spróbuj: ${l.tryT}</h3><div id="tryBody"></div></div>
+  <div class="card"><h3 style="margin-top:0">📝 Quiz – ${l.quiz.length} pytań</h3><p class="small">Zalicz quiz (min. 60%), aby oznaczyć lekcję jako ukończoną.${q?` Najlepszy wynik: <b class="acc">${q.best}/${q.n}</b>.`:''}</p>
+  <div class="row"><a class="btn acc" href="#/quiz/${l.id}">Rozpocznij quiz</a></div></div>
+  <div class="row">${l.id>1?`<a class="btn" href="#/lekcja/${l.id-1}">← Poprzednia</a>`:''}${nx?`<a class="btn" href="#/lekcja/${nx.id}">Następna →</a>`:''}</div>`;
+  const tb=$('#tryBody');
+  if(l.tryKind==='choice')choiceTask(tb,l.tryTasks,()=>{P.try[l.id]=1;saveP()});
+  else if(l.tryKind==='scale')scaleCalc(tb);
+  else if(l.tryKind==='views3')views3(tb);
+  else if(l.tryKind==='builder')builder(tb);
+}
+/* legend hotspot interaction */
+document.addEventListener('click',e=>{const g=e.target.closest('.nm');if(!g)return;const figEl=g.closest('figure');let lg=figEl&&figEl.nextElementSibling;if(!lg||!lg.classList.contains('lg'))return;
+  $$('li',lg).forEach(li=>li.classList.toggle('on',li.dataset.n===g.dataset.n));const li=$(`li[data-n="${g.dataset.n}"]`,lg);if(li)li.scrollIntoView({block:'nearest',behavior:'smooth'});beep(880,.05)});
+
+/* generic multiple choice sequence */
+function choiceTask(el,tasks,onDone){
+  let i=0,ok=0;
+  const render=()=>{
+    if(i>=tasks.length){el.innerHTML=`<div class="score">${ok}/${tasks.length}</div><p class="center">${ok===tasks.length?'Bezbłędnie! 👏':'Dobrze – powtórz, by utrwalić.'}</p><div class="row"><button class="btn" id="again">Jeszcze raz</button></div>`;$('#again',el).onclick=()=>{i=0;ok=0;render()};onDone&&onDone();return}
+    const t=tasks[i],order=shuffle(t.opts.map((_,k)=>k));
+    el.innerHTML=`<div class="qhead"><span>Zadanie ${i+1} z ${tasks.length}</span><span>✓ ${ok}</span></div><p><b>${t.q}</b></p><div class="opts ${t.svgOpts?'optsv':''}">${order.map((k,n)=>`<button class="opt" data-k="${k}">${t.svgOpts?'':`<span class="ltr">${LETTERS[n]}</span>`}${t.opts[k]}</button>`).join('')}</div><div id="fb"></div>`;
+    $$('.opt',el).forEach(b=>b.onclick=()=>{const k=+b.dataset.k,good=k===t.a;if(good){ok++;sGood()}else sBad();
+      $$('.opt',el).forEach(x=>{x.disabled=true;if(+x.dataset.k===t.a)x.classList.add('good')});if(!good)b.classList.add('wrong');
+      $('#fb',el).innerHTML=`<div class="fb ${good?'good':'wrong'}">${good?'✓ Dobrze! ':'✗ Nie tym razem. '}${t.ex||''}</div><div class="row"><button class="btn acc" id="nx">${i+1<tasks.length?'Dalej →':'Wynik'}</button></div>`;
+      $('#nx',el).onclick=()=>{i++;render()}})};
+  render()}
+
+/* scale calculator */
+function scaleCalc(el){
+  const sc=[['1:1',1],['1:2',1/2],['1:5',1/5],['1:10',1/10],['1:20',1/20],['1:50',1/50],['1:100',1/100],['2:1',2],['5:1',5]];
+  el.innerHTML=`<label class="fld">Skala</label><div class="seg" id="sc">${sc.map((s,i)=>`<button data-i="${i}" class="${i===3?'on':''}">${s[0]}</button>`).join('')}</div>
+  <label class="fld">Wymiar rzeczywisty [mm]</label><input class="in" id="real" type="number" inputmode="decimal" value="1200">
+  <div class="out" id="res"></div><div id="bar"></div>
+  <label class="fld" style="margin-top:14px">…albo odwrotnie: zmierzone na rysunku [mm]</label><input class="in" id="drawn" type="number" inputmode="decimal" value="18"><div class="out" id="res2"></div>`;
+  let cur=3;const upd=()=>{const k=sc[cur][1],r=parseFloat($('#real',el).value)||0,d=parseFloat($('#drawn',el).value)||0;
+    $('#res',el).innerHTML=`Na rysunku: ${f(r*k)} mm`;$('#res2',el).innerHTML=`W rzeczywistości: ${f(d/k)} mm <span class="small">(${f(d/k/1000)} m)</span>`;
+    const w=Math.min(300,Math.max(1,r*k*1.0));$('#bar',el).innerHTML=svg('0 0 320 46',`<rect x="10" y="10" width="${f(Math.min(w,300))}" height="10" fill="rgba(255,154,31,.35)" class="k" style="stroke-width:1.5"/>`+T(10,40,r*k>300?'(dłuższe niż ekran – przy 1 px ≈ 1 mm)':'podgląd długości (1 px ≈ 1 mm)','tb'));P.try[2]=1;saveP()};
+  $$('#sc button',el).forEach(b=>b.onclick=()=>{cur=+b.dataset.i;$$('#sc button',el).forEach(x=>x.classList.toggle('on',x===b));upd()});
+  $('#real',el).oninput=upd;$('#drawn',el).oninput=upd;upd()}
+
+/* interactive 3-view explorer */
+const V3MODELS=[{n:'Klocek L',m:LPART},{n:'Klocek U',m:mkModel([20,20,20],[20,20],[20,20],[[2,2,2],[2,0,2]])},{n:'Schodki',m:mkModel([20,20,20],[20,20],[15,15,15],[[3,2,1],[3,2,0]])}];
+function views3(el){
+  let mi=0,v='F';
+  const names={F:'A – rzut główny (z przodu)',T:'B – rzut z góry',L:'C – rzut z lewej',E:'Układ trzech rzutów (metoda E)'};
+  el.innerHTML=`<p class="small">Wybierz bryłę i kierunek patrzenia. Pomarańczowe ściany i strzałka pokazują, na co patrzysz.</p><div class="seg" id="mdl">${V3MODELS.map((m,i)=>`<button data-i="${i}" class="${i?'':'on'}">${m.n}</button>`).join('')}</div>
+  <div id="iso3"></div><div class="seg" id="vw"><button data-v="F" class="on">A · przód</button><button data-v="T">B · góra</button><button data-v="L">C · lewa</button><button data-v="E">Układ E</button></div><figure class="fig"><div id="v2"></div><figcaption id="vcap"></figcaption></figure>`;
+  const r=()=>{const m=V3MODELS[mi].m;$('#iso3',el).innerHTML=isoSVG(m,{s:2,arrows:true,sel:v,hl:v==='E'?'':v,ex:'style="max-height:260px"'});
+    $('#v2',el).innerHTML=v==='E'?layoutE(m,{s:1.5,links:true}):viewSVG(m,v,{s:2.4,pad:12,ex:'style="max-height:200px"'});$('#vcap',el).textContent=names[v]+(v==='L'?' – przód bryły jest po prawej stronie rysunku':'');P.try[3]=1;saveP()};
+  $$('#mdl button',el).forEach(b=>b.onclick=()=>{mi=+b.dataset.i;$$('#mdl button',el).forEach(x=>x.classList.toggle('on',x===b));r()});
+  $$('#vw button',el).forEach(b=>b.onclick=()=>{v=b.dataset.v;$$('#vw button',el).forEach(x=>x.classList.toggle('on',x===b));r();beep(700,.04)});r()}
+
+/* height-map builder */
+function builder(el){
+  let g=[[2,1,1],[1,1,0],[1,0,0]];
+  el.innerHTML=`<p class="small">Dotknij pola, aby zmienić wysokość słupka klocków (0–3). Górny rząd = tył bryły, dolny = przód. Rysunek izometryczny i trzy rzuty powstają na bieżąco.</p>
+  <div class="small center">TYŁ</div><div class="bgrid" id="bg"></div><div class="small center">PRZÓD</div><div id="bIso"></div><figure class="fig"><div id="bE"></div><figcaption>Rzuty w metodzie E – sprawdź, czy rozumiesz każdą linię</figcaption></figure>`;
+  const r=()=>{$('#bg',el).innerHTML=g.map((row,y)=>row.map((h,x)=>`<button data-x="${x}" data-y="${y}" class="h${h}">${h}</button>`).join('')).join('');
+    $$('#bg button',el).forEach(b=>b.onclick=()=>{const x=+b.dataset.x,y=+b.dataset.y;g[y][x]=(g[y][x]+1)%4;beep(400+g[y][x]*150,.05);r()});
+    const any=g.flat().some(Boolean);if(!any){$('#bIso',el).innerHTML='<p class="center small">Dodaj choć jeden klocek.</p>';$('#bE',el).innerHTML='';return}
+    const m=unit(g);$('#bIso',el).innerHTML=isoSVG(m,{s:34,front:true,ex:'style="max-height:240px"'});$('#bE',el).innerHTML=layoutE(m,{s:26,gap:24,links:true});P.try[6]=1;saveP()};r()}
+
+/* ===== QUIZ ===== */
+function quiz(id){
+  const l=LESSONS.find(x=>x.id==id);if(!l)return home();head(`Quiz · <span>${l.t}</span>`,'#/lekcja/'+l.id);
+  const qs=l.quiz.map(q=>{const ord=shuffle(q.o.map((_,i)=>i));return{...q,ord}});let i=0,ok=0;const res=[];
+  const render=()=>{
+    if(i>=qs.length)return finish();
+    const q=qs[i];
+    app().innerHTML=`<div class="card"><div class="qhead"><span>Pytanie ${i+1} / ${qs.length}</span><span>✓ ${ok}</span></div><div class="dots">${qs.map((_,k)=>`<i class="${k<i?(res[k]?'g':'w'):k===i?'c':''}"></i>`).join('')}</div>
+    <p style="font-size:17px"><b>${q.q}</b></p><div class="opts">${q.ord.map((k,n)=>`<button class="opt" data-k="${k}"><span class="ltr">${LETTERS[n]}</span>${q.o[k]}</button>`).join('')}</div><div id="fb"></div></div>`;
+    $$('.opt').forEach(b=>b.onclick=()=>{const k=+b.dataset.k,good=k===q.a;res[i]=good;if(good){ok++;sGood()}else sBad();
+      $$('.opt').forEach(x=>{x.disabled=true;if(+x.dataset.k===q.a)x.classList.add('good')});if(!good){b.classList.add('wrong');b.parentElement.classList.add('shake')}
+      $('#fb').innerHTML=`<div class="fb ${good?'good':'wrong'}"><b>${good?'✓ Dobrze!':'✗ Źle.'}</b> ${q.e}</div><div class="row"><button class="btn acc" id="nx">${i+1<qs.length?'Następne pytanie →':'Zobacz wynik'}</button></div>`;
+      $('#nx').onclick=()=>{i++;render();window.scrollTo(0,0)}})};
+  const finish=()=>{const n=qs.length,pass=ok/n>=.6,prev=P.quiz[l.id];P.quiz[l.id]={best:Math.max(ok,prev?prev.best:0),n,last:ok};if(pass)P.done[l.id]=1;saveP();if(pass)sWin();
+    const nx=LESSONS.find(x=>x.id===l.id+1);
+    app().innerHTML=`<div class="card center"><h2>${pass?'Zaliczone! 🎉':'Prawie…'}</h2><div class="score">${ok}/${n}</div><p>${pass?'Lekcja oznaczona jako ukończona.':'Potrzebujesz min. 60%. Przejrzyj lekcję i spróbuj ponownie.'}</p><p class="small">Najlepszy wynik: ${P.quiz[l.id].best}/${n}</p>
+    <div class="row"><button class="btn" id="rep">Powtórz quiz</button><a class="btn" href="#/lekcja/${l.id}">Wróć do lekcji</a></div>${nx?`<div class="row"><a class="btn acc" href="#/lekcja/${nx.id}">Następna lekcja →</a></div>`:`<div class="row"><a class="btn acc" href="#/">Ekran główny</a></div>`}</div>`;
+    $('#rep').onclick=()=>quiz(id)};
+  render()}
+
+/* ===== VIEWS EXERCISE: pick the correct top view ===== */
+const VX=[
+  {r:[[2,2,1],[1,0,0]]},{r:[[1,2,1],[1,2,1]]},{r:[[3,0,0],[2,2,0],[1,1,1]]},{r:[[2,0,2],[2,1,2]]},
+  {r:[[1,1,1],[2,1,0],[2,0,0]]},{r:[[2,1],[2,1],[1,1]]},{r:[[0,1,0],[1,3,1],[0,1,0]]},{r:[[3,2],[0,1]]}];
+function vxOptions(item,all){
+  const m=unit(item.r),sv=mm=>viewSVG(mm,'T',{s:22,pad:6});
+  const correct=sv(m);
+  const cand=[{s:sv(unit(item.r.map(r=>r.slice().reverse()))),why:'To odbicie lustrzane – lewa i prawa strona zamienione.'},
+    {s:sv(unit(item.r.slice().reverse())),why:'Przód i tył zamienione miejscami – pamiętaj: w rzucie z góry przód bryły jest na dole.'},
+    {s:viewSVG(m,'F',{s:22,pad:6}),why:'To rzut główny (widok z przodu), a nie z góry.'},
+    {s:sv(unit(item.r[0].map((_,x)=>item.r.map(r=>r[x])))),why:'Ten rzut jest obrócony o 90°.'},
+    ...shuffle(all.filter(o=>o!==item)).map(o=>({s:sv(unit(o.r)),why:'To rzut z góry zupełnie innej bryły.'}))];
+  const seen=new Set([correct]),opts=[{s:correct,ok:true}];
+  for(const c of cand){if(opts.length>=4)break;if(!seen.has(c.s)){seen.add(c.s);opts.push(c)}}
+  return shuffle(opts)}
+function viewsEx(){
+  head('Dopasuj <span>rzuty</span>','#/');
+  const items=shuffle(VX).slice(0,6);let i=0,ok=0;
+  const render=()=>{
+    if(i>=items.length){const best=Math.max(P.views.best||0,ok);P.views={best,last:ok,n:items.length};saveP();if(ok>=items.length-1)sWin();
+      app().innerHTML=`<div class="card center"><h2>Wynik</h2><div class="score">${ok}/${items.length}</div><p>${ok===items.length?'Masz wyobraźnię przestrzenną jak architekt! 🏗️':'Ćwicz dalej – z każdą bryłą idzie łatwiej.'}</p><p class="small">Rekord: ${best}/${items.length}</p><div class="row"><button class="btn acc" id="ag">Nowa seria</button><a class="btn" href="#/lekcja/3">Lekcja o rzutach</a></div></div>`;$('#ag').onclick=viewsEx;return}
+    const it=items[i],opts=vxOptions(it,VX);
+    app().innerHTML=`<div class="card"><div class="qhead"><span>Bryła ${i+1} / ${items.length}</span><span>✓ ${ok}</span></div><div class="dots">${items.map((_,k)=>`<i class="${k<i?'g':k===i?'c':''}"></i>`).join('')}</div>
+    <p><b>Który rysunek to rzut z góry (B) tej bryły?</b></p>${fig(isoSVG(unit(it.r),{s:30,front:true,ex:'style="max-height:230px"'}),'Patrzysz z góry; przód bryły (strzałka) jest na dole rzutu')}
+    <div class="opts optsv">${opts.map((o,n)=>`<button class="opt" data-n="${n}"><span class="ltr">${LETTERS[n]}</span>${o.s}</button>`).join('')}</div><div id="fb"></div></div>`;
+    $$('.opt').forEach(b=>b.onclick=()=>{const o=opts[+b.dataset.n];if(o.ok){ok++;sGood()}else sBad();
+      $$('.opt').forEach(x=>{x.disabled=true;if(opts[+x.dataset.n].ok)x.classList.add('good')});if(!o.ok)b.classList.add('wrong');
+      $('#fb').innerHTML=`<div class="fb ${o.ok?'good':'wrong'}">${o.ok?'✓ Dobrze! Linie wewnątrz rzutu pokazują miejsca, gdzie zmienia się wysokość bryły.':'✗ '+o.why}</div><div class="row"><button class="btn acc" id="nx">${i+1<items.length?'Następna bryła →':'Wynik'}</button></div>`;
+      $('#fb').scrollIntoView({block:'nearest',behavior:'smooth'});$('#nx').onclick=()=>{i++;render();window.scrollTo(0,0)}})};
+  render()}
+
+/* ===== SKETCH CANVAS ===== */
+const SK_TYPES=[{k:'k',w:2.6,d:[]},{k:'c',w:1.1,d:[]},{k:'h',w:1.1,d:[8,4]},{k:'o',w:1.1,d:[20,4,2,4]},{k:'o2',w:1.1,d:[20,4,2,4,2,4]},{k:'ko',w:2.6,d:[20,4,2,4]}];
+function sketch(){
+  head('<span>Szkicownik</span>','#/');
+  let lines=store.get('sketch',null)||[],type=0,snap=true,ortho=true,cur=null;
+  app().innerHTML=`<p class="small">Przeciągnij palcem, aby narysować odcinek. 1 kratka = 5 mm. Wybierz rodzaj linii:</p>
+  <div class="ltsel" id="lts">${SK_TYPES.map((t,i)=>`<button data-i="${i}" class="${i?'':'on'}">${lineSample(t.k,62).replace('class="ls"','')}<span>${LINE_TYPES[t.k].n}</span></button>`).join('')}</div>
+  <div class="canvasWrap" id="cw"><canvas id="cv"></canvas><div class="readout" id="ro">gotowy</div></div>
+  <div class="seg"><button id="snap" class="on">Przyciągaj do siatki</button><button id="orth" class="on">Tylko 0° / 45° / 90°</button></div>
+  <div class="row"><button class="btn" id="undo">↶ Cofnij</button><button class="btn" id="clr">Wyczyść</button></div>
+  <div class="card"><b class="acc">Zadanie:</b> narysuj rzut główny klocka L z lekcji 3 (60 × 40 mm, stopień 30 × 20 mm): zarys linią grubą, oś punktową, a na koniec linię wymiarową cienką.</div>`;
+  const cv=$('#cv'),cw=$('#cw'),ctx=cv.getContext('2d');let W=0,H=0,dpr=1;const G=10;
+  const size=()=>{dpr=window.devicePixelRatio||1;W=cw.clientWidth;H=Math.round(Math.min(window.innerHeight*.58,W*1.25));cv.width=W*dpr;cv.height=H*dpr;cv.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);draw()};
+  const drawLine=(l,prev)=>{const t=SK_TYPES[l.t];ctx.beginPath();ctx.setLineDash(t.d);ctx.lineWidth=t.w;ctx.strokeStyle=prev?'#ff9a1f':(t.w>2?'#eaf4ff':'#9fd0ff');ctx.lineCap='butt';ctx.moveTo(l.x1,l.y1);ctx.lineTo(l.x2,l.y2);ctx.stroke();ctx.setLineDash([])};
+  function draw(){ctx.fillStyle='#0b2a50';ctx.fillRect(0,0,W,H);
+    for(let x=0;x<=W;x+=G){ctx.strokeStyle=x%(G*5)?'rgba(143,199,255,.12)':'rgba(143,199,255,.3)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x+.5,0);ctx.lineTo(x+.5,H);ctx.stroke()}
+    for(let y=0;y<=H;y+=G){ctx.strokeStyle=y%(G*5)?'rgba(143,199,255,.12)':'rgba(143,199,255,.3)';ctx.beginPath();ctx.moveTo(0,y+.5);ctx.lineTo(W,y+.5);ctx.stroke()}
+    lines.forEach(l=>drawLine(l));if(cur)drawLine(cur,true)}
+  const pt=e=>{const r=cv.getBoundingClientRect();let x=e.clientX-r.left,y=e.clientY-r.top;if(snap){x=Math.round(x/G)*G;y=Math.round(y/G)*G}return[x,y]};
+  const constrain=(x1,y1,x,y)=>{if(!ortho)return[x,y];const dx=x-x1,dy=y-y1,a=Math.round(Math.atan2(dy,dx)/(Math.PI/4))*(Math.PI/4),len=Math.hypot(dx,dy);let px=Math.cos(a),py=Math.sin(a);let d=Math.abs(px)>.1&&Math.abs(py)>.1?Math.round(len*Math.SQRT1_2/(snap?G:1))*(snap?G:1)/Math.SQRT1_2:len;if(snap&&!(Math.abs(px)>.1&&Math.abs(py)>.1))d=Math.round(len/G)*G;return[x1+px*d,y1+py*d]};
+  const mm=l=>Math.round(Math.hypot(l.x2-l.x1,l.y2-l.y1)/G*5);
+  cv.addEventListener('pointerdown',e=>{e.preventDefault();cv.setPointerCapture(e.pointerId);const[x,y]=pt(e);cur={x1:x,y1:y,x2:x,y2:y,t:type};draw()});
+  cv.addEventListener('pointermove',e=>{if(!cur)return;e.preventDefault();const[x,y]=pt(e);[cur.x2,cur.y2]=constrain(cur.x1,cur.y1,x,y);$('#ro').textContent=`${LINE_TYPES[SK_TYPES[type].k].n} · ${mm(cur)} mm`;draw()});
+  const up=()=>{if(!cur)return;if(Math.hypot(cur.x2-cur.x1,cur.y2-cur.y1)>=G*.9){lines.push(cur);store.set('sketch',lines);beep(520,.04)}cur=null;draw()};
+  cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',()=>{cur=null;draw()});
+  $$('#lts button').forEach(b=>b.onclick=()=>{type=+b.dataset.i;$$('#lts button').forEach(x=>x.classList.toggle('on',x===b));$('#ro').textContent=LINE_TYPES[SK_TYPES[type].k].n});
+  $('#snap').onclick=e=>{snap=!snap;e.target.classList.toggle('on',snap)};$('#orth').onclick=e=>{ortho=!ortho;e.target.classList.toggle('on',ortho)};
+  $('#undo').onclick=()=>{lines.pop();store.set('sketch',lines);draw()};$('#clr').onclick=()=>{if(!lines.length||confirm('Wyczyścić cały rysunek?')){lines=[];store.set('sketch',lines);draw()}};
+  const ro=()=>size();window.addEventListener('resize',ro);onCleanup(()=>window.removeEventListener('resize',ro));size()}
+
+/* ===== GAMES ===== */
+const WORDS=[['bouwtekening','rysunek budowlany'],['plattegrond','rzut kondygnacji'],['doorsnede','przekrój'],['gevel','elewacja'],['maatvoering','wymiarowanie'],['schaal','skala'],['peil','poziom odniesienia ±0'],['fundering','fundament'],['balk','belka'],['kozijn','ościeżnica / rama okna'],['dorpel','próg'],['latei','nadproże'],['spouwmuur','ściana szczelinowa'],['isolatie','izolacja'],['dakgoot','rynna'],['nok','kalenica'],['gording','płatew'],['dakspant','wiązar dachowy'],['verdieping','piętro'],['trap','schody'],['leuning','poręcz'],['metselwerk','mur(arka)'],['gewapend beton','żelbet'],['wapening','zbrojenie'],['hout','drewno'],['multiplex','sklejka'],['spaanplaat','płyta wiórowa'],['raam','okno'],['deur','drzwi'],['zaag','piła'],['boor','wiertarka / wiertło'],['schroef','wkręt'],['spijker','gwóźdź'],['waterpas','poziomica'],['duimstok','miarka składana'],['winkelhaak','kątownik'],['pen-en-gat','czop i gniazdo'],['zwaluwstaart','jaskółczy ogon'],['sponning','wręg (felc)'],['messing en groef','pióro i wpust'],['verstek','ucios 45°'],['b.k.','górna krawędź (bovenkant)'],['o.k.','dolna krawędź (onderkant)'],['h.o.h.','rozstaw osiowy'],['NAP','poziom morza NL (n.p.m.)'],['mv','poziom terenu (maaiveld)'],['i.h.w.','wykonane na budowie'],['t.p.v.','w miejscu (ter plaatse van)'],['stramien','siatka osi'],['werktekening','rysunek wykonawczy']];
+function games(){head('<span>Gry</span>','#/');
+  app().innerHTML=`<h2>Gry</h2><p class="small">Ucz się przez zabawę – słówka z holenderskiej budowy i symbole z rysunków.</p>
+  <a class="card lc" href="#/gry/slowka"><div class="n">⏱️</div><div class="b"><strong>Wyścig słówek</strong><span class="small">60 sekund, 3 życia, kombo za serię dobrych odpowiedzi. NL ↔ PL.</span></div><span class="st">${store.get('wr_best',0)?'🏆 '+store.get('wr_best',0):'nowa'}</span></a>
+  <a class="card lc" href="#/gry/memory"><div class="n">🃏</div><div class="b"><strong>Memory symboli</strong><span class="small">Połącz symbol z rysunku z jego nazwą PL/NL.</span></div><span class="st">${store.get('mem_best',0)?'🏆 '+store.get('mem_best',0)+' ruchów':'nowa'}</span></a>
+  <a class="card lc" href="#/fiszki"><div class="n">🗂️</div><div class="b"><strong>Fiszki NL ↔ PL</strong><span class="small">Holenderskie terminy budowlane i stolarskie, z wymową.</span></div><span class="st">nauka</span></a>
+  <a class="card lc" href="#/rzuty"><div class="n">🧊</div><div class="b"><strong>Dopasuj rzuty</strong><span class="small">Wyobraźnia przestrzenna – wybierz właściwy rzut z góry.</span></div><span class="st">${P.views.best?'🏆 '+P.views.best:'nowa'}</span></a>`}
+
+function wordRace(){
+  head('Wyścig <span>słówek</span>','#/gry');
+  const best=()=>store.get('wr_best',0);
+  const start=()=>{
+    let t=60,lives=3,score=0,combo=0,maxCombo=0,good=0,bad=0,deck=shuffle(WORDS),di=0,lock=false,q=null,missed=[];const t0=Date.now();let endAt=t0+60000;
+    app().innerHTML=`<div class="card" id="gc"><div class="hud"><span class="lives" id="lv"></span><span id="sc">0</span><span class="combo" id="cb"></span><span id="tm">60s</span></div><div class="tbar"><i id="tb" style="width:100%"></i></div>
+    <div class="word" id="wd"><div class="lang" id="lg"></div><div class="w" id="w"></div></div><div class="gopts" id="go"></div></div><p class="small center">Dobra odpowiedź: +10 × mnożnik. Co 3 trafienia z rzędu mnożnik rośnie (max ×5). Błąd = −1 życie.</p>`;
+    const hud=()=>{$('#lv').textContent='♥'.repeat(lives)+'♡'.repeat(3-lives);$('#sc').textContent=score+' pkt';const mul=Math.min(5,1+Math.floor(combo/3));$('#cb').textContent=combo>=2?`🔥${combo} ×${mul}`:''};
+    const nextQ=()=>{if(di>=deck.length){deck=shuffle(WORDS);di=0}const w=deck[di++],rev=Math.random()<.3;const others=shuffle(WORDS.filter(x=>x!==w)).slice(0,3);
+      q={w,rev,opts:shuffle([w,...others])};$('#lg').textContent=rev?'POLSKI → NEDERLANDS':'NEDERLANDS → POLSKI';$('#w').textContent=rev?w[1]:w[0];
+      $('#go').innerHTML=q.opts.map((o,n)=>`<button class="opt" data-n="${n}">${rev?o[0]:o[1]}</button>`).join('');$('#wd').classList.remove('pulse');void $('#wd').offsetWidth;$('#wd').classList.add('pulse');
+      $$('#go .opt').forEach(b=>b.onclick=()=>answer(b));lock=false};
+    const answer=b=>{if(lock)return;lock=true;const o=q.opts[+b.dataset.n],ok=o===q.w;
+      $$('#go .opt').forEach(x=>{if(q.opts[+x.dataset.n]===q.w)x.classList.add('good')});
+      if(ok){combo++;maxCombo=Math.max(maxCombo,combo);good++;const mul=Math.min(5,1+Math.floor((combo-1)/3)),pts=10*mul;score+=pts;sGood();if(combo%3===0)beep(1320,.08,'triangle',.06,.18);
+        const fl=document.createElement('div');fl.className='float';fl.textContent='+'+pts;$('#wd').appendChild(fl);setTimeout(()=>fl.remove(),800);hud();setTimeout(()=>{if(alive())nextQ()},280)}
+      else{b.classList.add('wrong');combo=0;bad++;lives--;missed.push(q.w);sBad();$('#gc').classList.remove('shake');void $('#gc').offsetWidth;$('#gc').classList.add('shake');hud();if(lives<=0){setTimeout(end,700);return}setTimeout(()=>{if(alive())nextQ()},900)}};
+    let over=false;const alive=()=>!over;
+    const tick=()=>{if(over)return;const left=Math.max(0,(endAt-Date.now())/1000);$('#tm').textContent=Math.ceil(left)+'s';const tb=$('#tb');tb.style.width=(left/60*100)+'%';tb.classList.toggle('low',left<10);if(left<=0)end()};
+    const iv=setInterval(tick,100);onCleanup(()=>{over=true;clearInterval(iv)});
+    function end(){if(over)return;over=true;clearInterval(iv);const rec=score>best();if(rec)store.set('wr_best',score);rec&&score>0?sWin():beep(300,.3,'triangle',.06);
+      app().innerHTML=`<div class="card center"><h2>${lives<=0?'Koniec żyć!':'Czas minął!'}</h2><div class="score">${score}</div>${rec&&score>0?'<p><span class="badge">🏆 Nowy rekord!</span></p>':`<p class="small">Rekord: ${best()}</p>`}
+      <p>Trafienia: <b class="acc">${good}</b> · Błędy: <b>${bad}</b> · Najdłuższa seria: <b>${maxCombo}</b></p>
+      ${missed.length?`<div class="card" style="text-align:left"><b>Do powtórki:</b><ul class="clean">${missed.map(w=>`<li><b>${w[0]}</b> – ${w[1]}</li>`).join('')}</ul></div>`:''}
+      <div class="row"><button class="btn acc" id="again">Zagraj ponownie</button><a class="btn" href="#/gry">Inne gry</a></div></div>`;$('#again').onclick=start}
+    hud();nextQ();tick()};
+  app().innerHTML=`<div class="card center"><div style="font-size:54px">⏱️</div><h2>Wyścig słówek</h2><p>Masz <b class="acc">60 sekund</b> i <b class="acc">3 życia</b>. Dopasuj holenderskie słowa i skróty z budowy do polskich znaczeń (czasem odwrotnie!).</p><p class="small">Seria 3 dobrych odpowiedzi zwiększa mnożnik punktów. Rekord: <b>${best()}</b></p><div class="row"><button class="btn acc full" id="go">Start!</button></div><p class="small">Dźwięk możesz wyciszyć ikoną głośnika w prawym górnym rogu.</p></div>`;
+  $('#go').onclick=start}
+
+const MEM=[
+ {pl:'Drzwi',nl:'deur',s:`<path class="k" d="M2,46 H14 M50,46 H62 M2,54 H14 M50,54 H62 M14,46 V54 M50,46 V54"/><line class="k" x1="14" y1="46" x2="14" y2="10"/><path class="c" d="M14,10 A36,36 0 0 1 50,46"/>`},
+ {pl:'Okno',nl:'raam',s:`<rect x="2" y="26" width="16" height="12" fill="url(#pBrick)"/><rect x="46" y="26" width="16" height="12" fill="url(#pBrick)"/><path class="k" d="M2,26 H18 V38 H2 M62,26 H46 V38 H62"/><path class="c" d="M18,26 H46 M18,38 H46 M18,30.5 H46 M18,33.5 H46"/>`},
+ {pl:'Schody',nl:'trap',s:`<rect x="14" y="4" width="36" height="56" class="c" style="stroke:#eaf4ff"/>${[12,20,28,36,44,52].map(y=>`<line class="c" x1="14" y1="${y}" x2="50" y2="${y}"/>`).join('')}<circle cx="32" cy="56" r="2.2" fill="#ff9a1f"/><line x1="32" y1="56" x2="32" y2="12" stroke="#ff9a1f" stroke-width="1.5"/><polygon points="32,6 28,14 36,14" fill="#ff9a1f"/>`},
+ {pl:'Poziom ±0,00',nl:'peil',s:`<path d="M16,26 H28 L22,36 Z" fill="none" stroke="#eaf4ff" stroke-width="1.6"/><line class="c" x1="6" y1="36" x2="58" y2="36"/><text x="30" y="24" class="t" style="font-size:10px">±0,00</text>`},
+ {pl:'Oś konstrukcyjna',nl:'stramien (as)',s:`<circle cx="32" cy="12" r="9" class="c" style="stroke:#eaf4ff"/><text x="32" y="16" class="t" text-anchor="middle" style="font-size:11px">A</text><line class="c o" x1="32" y1="21" x2="32" y2="62"/>`},
+ {pl:'Drewno (przekrój)',nl:'hout',s:`<clipPath id="mcw"><rect x="8" y="12" width="48" height="40"/></clipPath><g clip-path="url(#mcw)">${[8,15,23,32,42,53,65].map(r=>`<circle cx="16" cy="60" r="${r}" class="c"/>`).join('')}</g><rect x="8" y="12" width="48" height="40" class="k" style="stroke-width:1.8"/>`},
+ {pl:'Beton',nl:'beton',s:`<rect x="8" y="12" width="48" height="40" fill="url(#pConc)"/><rect x="8" y="12" width="48" height="40" class="k" style="stroke-width:1.8"/>`},
+ {pl:'Izolacja',nl:'isolatie',s:`<rect x="8" y="12" width="48" height="40" fill="url(#pIns)"/><rect x="8" y="12" width="48" height="40" class="k" style="stroke-width:1.8"/>`},
+ {pl:'Północ',nl:'noordpijl',s:`<circle cx="32" cy="36" r="18" class="c" style="stroke:#eaf4ff"/><path d="M32,14 L39,46 L32,40 L25,46 Z" fill="#ff9a1f"/><text x="32" y="11" class="ta" text-anchor="middle">N</text>`}];
+function memory(){
+  head('Memory <span>symboli</span>','#/gry');
+  const pairs=shuffle(MEM).slice(0,6);const cards=shuffle(pairs.flatMap((p,i)=>[{p:i,kind:'s'},{p:i,kind:'n'}]));
+  let open=[],moves=0,found=0,lock=false;const t0=Date.now();
+  app().innerHTML=`<div class="hud" style="margin:4px 0 10px"><span>Ruchy: <b class="acc" id="mv">0</b></span><span>Pary: <b class="acc" id="pr">0</b>/6</span><span class="small">Rekord: ${store.get('mem_best',0)||'–'}</span></div>
+  <div class="mem" id="mem">${cards.map((c,i)=>{const p=pairs[c.p];return `<button class="mc" data-i="${i}" data-p="${c.p}" aria-label="karta"><div class="in"><div class="ba">?</div><div class="fa">${c.kind==='s'?`<svg viewBox="0 0 64 64">${p.s}</svg>`:`${p.pl}<small>${p.nl}</small>`}</div></div></button>`}).join('')}</div>
+  <p class="small center">Odkryj dwie karty: symbol i pasującą nazwę.</p><div class="row"><button class="btn" id="rs">Nowa gra</button></div>`;
+  $('#rs').onclick=memory;
+  $$('.mc').forEach(b=>b.onclick=()=>{if(lock||b.classList.contains('f'))return;b.classList.add('f');beep(600,.04);open.push(b);
+    if(open.length===2){moves++;$('#mv').textContent=moves;const [a,c]=open.map(x=>cards[+x.dataset.i]);
+      if(a.p===c.p&&a.kind!==c.kind){open.forEach(x=>x.classList.add('m'));open=[];found++;$('#pr').textContent=found;sGood();
+        if(found===6){const sec=Math.round((Date.now()-t0)/1000),bst=store.get('mem_best',0),rec=!bst||moves<bst;if(rec)store.set('mem_best',moves);setTimeout(()=>{sWin();
+          app().insertAdjacentHTML('afterbegin',`<div class="card center pulse"><h2>Brawo! 🎉</h2><p>Wszystkie pary w <b class="acc">${moves}</b> ruchach (${sec} s).</p>${rec?'<p><span class="badge">🏆 Nowy rekord!</span></p>':''}</div>`);window.scrollTo(0,0)},400)}}
+      else{lock=true;setTimeout(()=>{open.forEach(x=>x.classList.remove('f'));open=[];lock=false;beep(250,.08,'square',.03)},850)}}})}
+
+/* ===== ROUTER ===== */
+const ROUTES=[[/^#?\/?$/,home],[/^#\/lekcja\/(\d+)$/,lesson],[/^#\/quiz\/(\d+)$/,quiz],[/^#\/rzuty$/,viewsEx],[/^#\/szkic$/,sketch],[/^#\/gry$/,games],[/^#\/gry\/slowka$/,wordRace],[/^#\/gry\/memory$/,memory],[/^#\/fiszki$/,fiszki]];
+function route(){cleanups.forEach(fn=>{try{fn()}catch(e){}});cleanups=[];const h=location.hash||'#/';
+  const sec=h.startsWith('#/rzuty')?'rzuty':h.startsWith('#/szkic')?'szkic':h.startsWith('#/gry')||h.startsWith('#/fiszki')?'gry':'home';$$('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===sec));
+  for(const [re,fn] of ROUTES){const m=h.match(re);if(m){fn(...m.slice(1));window.scrollTo(0,0);return}}home()}
+window.addEventListener('hashchange',route);
+$('#back').onclick=()=>{location.hash=backTo||'#/'};
+$('#snd').onclick=()=>{muted=!muted;store.set('mute',muted);setSnd();if(!muted)beep(880,.06)};
+setSnd();route();
+</script>
+<script>if("serviceWorker"in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("sw.js").catch(()=>{});</script>
+</body>
+</html>
